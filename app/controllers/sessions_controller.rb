@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
    if teacher && teacher.authenticate(params[:teacher][:password])
      session[:teacher_id] = teacher.id
      redirect_to team_path(teacher.team)
+
    else
      @errors = teacher.errors.full_messages
      render :new
