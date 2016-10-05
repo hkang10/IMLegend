@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
  protect_from_forgery with: :exception
 
  def new
-   render :new
  end
 
  def create
