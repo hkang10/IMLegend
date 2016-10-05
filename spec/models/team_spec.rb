@@ -16,4 +16,9 @@ describe Team do
       expect(team.team_name).to eq 'Probably should have gone with name'
     end
   end
+
+  describe "associations" do
+
+  end
+
 end
