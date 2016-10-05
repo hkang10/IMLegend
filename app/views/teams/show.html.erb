@@ -1,1 +1,9 @@
-<h2> <%= team.name %></h2>
+<h2> <%= @team.team_name %></h2>
+<% if @team.captain %>
+  <h3> <%= @team.captain.full_name %> </h3>
+<% end %>
+<h3>Teacher: <%= @team.teacher.full_name %></h3>
+<% @team.students.each do |student| %>
+<h3><%=student.full_name %></h3>
+<% end %>
+<%= link_to '+ student', students_path %>
