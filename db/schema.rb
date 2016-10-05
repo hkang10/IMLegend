@@ -11,10 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161005211233) do
+
+ActiveRecord::Schema.define(version: 20161005203020) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
 
   create_table "teachers", force: :cascade do |t|
     t.string   "first_name"
@@ -23,6 +26,23 @@ ActiveRecord::Schema.define(version: 20161005211233) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+
+  create_table "students", force: :cascade do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "gender"
+    t.float   "gpa"
+    t.integer "number_of_detentions"
+    t.string  "sports_teams",         default: [], array: true
+    t.integer "number_of_absences"
+    t.integer "team_id"
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string  "team_name"
+    t.integer "captain_id"
+    t.integer "teacher_id"
+
   end
 
 end
