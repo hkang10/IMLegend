@@ -1,22 +1,26 @@
 <div class="teacher-form">
   <h3>Start your legend...........here</h3>
- <%= form_for(@teacher) do |f| %>
- <p>
+  <%= form_for(@teacher) do |f| %>
+  <p>
    <%= f.label :first_name %>
    <%= f.text_field :first_name %>
- </p>
+  </p>
   <p>
    <%= f.label :last_name %>
    <%= f.text_field :last_name %>
- </p>
- <p>
+  </p>
+  <p>
    <%= f.label :email %>
    <%= f.email_field :email %>
- </p>
- <p>
+  </p>
+  <p>
    <%= f.label :password %>
    <%= f.password_field :password %>
- </p>
-   <%= f.submit %>
-   <% end %>
- </div>
+  </p>
+  <p>
+   <%= f.label :team_name %>
+   <%= f.text_field :team_name %>
+  </p>
+ <%= f.submit %>
+ <% end %>
+</div>

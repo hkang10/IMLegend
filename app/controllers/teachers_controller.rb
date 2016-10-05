@@ -3,11 +3,11 @@ class TeachersController < ApplicationController
 
  def new
    @teacher = Teacher.new
-   render :new
  end
 
  def create
    @teacher = Teacher.new(teacher_params)
+   @team = @teacher.team.create(params[:team_name])
 
    if @teacher.save
      session[:teacher_id] = @teacher.id
