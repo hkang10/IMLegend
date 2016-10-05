@@ -4,6 +4,10 @@ feature "teacher's own home page" do
   describe "when teacher navigates to their home page" do
 
     xscenario "the teacher sees their team name" do
+      #teacher = Teacher.create!()
+      #session[:user_id] = teacher.id
+      visit "/"
+      expect(page).to have_content
     end
 
     xscenario "the teacher sees their team captain" do
