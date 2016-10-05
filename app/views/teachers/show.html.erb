@@ -1,0 +1,6 @@
+<div class="admin-control">
+  <h3>Admin Control</h3>
+
+  <%= link_to 'Students', students_path %>
+  <%= f.collection_select :teacher_id, @teachers, :id, :name, include_blank: true %>
+</div>
