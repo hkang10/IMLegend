@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
 
+  get '/admin/:id' => 'teachers#show'
 
   resources :teams, only: [:show, :index]
   resources :students
