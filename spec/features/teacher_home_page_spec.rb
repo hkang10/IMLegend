@@ -2,12 +2,20 @@ require "rails_helper"
 
 feature "teacher's own home page" do
   describe "when teacher navigates to their home page" do
+    let(:teacher) { Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false) }
+    let(:team) { Team.create!(teacher_id: teacher.id, captain_id: 12, team_name: 'Probably should have gone with name') }
 
-    xscenario "the teacher sees their team name" do
-      #teacher = Teacher.create!()
-      #session[:user_id] = teacher.id
-      visit "/"
-      expect(page).to have_content
+    scenario "the teacher sees their team name" do
+      visit root_path
+      within('.login-form') do
+        fill_in :'teacher[email]', with: 'tmoney@ymail.com'
+        fill_in :'teacher[password]', with: 'password'
+        click_button('Save Teacher')
+      end
+
+      visit team_path(team)
+      expect(page).to have_current_path team_path(team)
+      expect(page).to have_content team.name
     end
 
     xscenario "the teacher sees their team captain" do
