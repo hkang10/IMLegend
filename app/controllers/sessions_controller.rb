@@ -5,15 +5,16 @@ class SessionsController < ApplicationController
  end
 
  def create
-   teacher = Teacher.find_by(email: params[:email])
 
-   if teacher && teacher.authenticate(params[:password])
-     session[:teacher_id] = teacher.id
-     redirect_to teams_path
+  teacher = Teacher.find_by(email: params[:email])
+  @team = teacher.team
+  if teacher && teacher.authenticate(params[:password])
+    session[:teacher_id] = teacher.id
+    redirect_to team_path(@team)
    else
-     @errors = teacher.errors.full_messages
-     render :new
-   end
+    # @errors = teacher.errors.full_messages
+    render :new
+  end
  end
 
  def destroy

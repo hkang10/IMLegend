@@ -4,6 +4,7 @@ ruby '2.2.4'
 
 gem 'mime-types', '2.6.2'
 gem 'mime-types-data', '~> 3.2015'
+gem 'pry'
 # ruby '2.2.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
