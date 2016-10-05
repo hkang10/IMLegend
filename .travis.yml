@@ -6,7 +6,7 @@ rvm:
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
 # notifications:
-  slack: i-m-legend:PdvWPWK2bn9By9g6z3xBWFir
+  # slack: i-m-legend:PdvWPWK2bn9By9g6z3xBWFir
 
 
 
