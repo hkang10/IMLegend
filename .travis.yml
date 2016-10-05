@@ -1,5 +1,7 @@
 language: ruby
 before_install: rvm install 2.1.5 && rvm use 2.1.5
+services:
+  - postgresql
 after_install: bundle exec rake db:setup
 
 # uncomment and edit the following line if your project needs to run something other than `rake`:
