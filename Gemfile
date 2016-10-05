@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'mime-types', '2.6.2'
+gem 'mime-types-data', '~> 3.2015'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -34,7 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  # gem 'byebug'
 end
 
 group :development do
