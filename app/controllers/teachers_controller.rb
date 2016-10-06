@@ -1,17 +1,22 @@
 class TeachersController < ApplicationController
   protect_from_forgery with: :exception
 
- def new
-   @teacher = Teacher.new
- end
+  def index
+    @students = Student.all
+  end
 
- def create
+  def new
+   @teacher = Teacher.new
+  end
+
+  def create
    @teacher = Teacher.new(teacher_params)
 
    if @teacher.save
      @team = Team.create(teacher_id: @teacher.id, team_name: params[:teacher][:team_name])
      session[:teacher_id] = @teacher.id
      if @teacher.admin? == true
+        @teachers = Teacher.all
         redirect_to teacher_path
       else
         redirect_to team_path(@team)
@@ -20,11 +25,29 @@ class TeachersController < ApplicationController
      @errors = @teacher.errors.full_messages
      render :new
    end
- end
+  end
 
- private
+  def edit
+    @teacher = Teacher.find(params[:id])
+    if @teacher.admin? == true
+      @teacher.update_attributes(admin?: false)
+    else
+      @teacher.update_attributes(admin?: true)
+    end
 
- def teacher_params
+    redirect_to teacher_path
+  end
+
+  def destroy
+    @teacher = Teacher.find(params[:id])
+    @teacher.destroy
+
+    redirect_to teacher_path
+  end
+
+  private
+
+  def teacher_params
    params.require(:teacher).permit(:first_name, :last_name, :email, :password)
- end
+  end
 end

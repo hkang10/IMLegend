@@ -57,4 +57,4 @@ group :development do
 end
 
 gem 'puma'
-
+gem 'pry-rails'

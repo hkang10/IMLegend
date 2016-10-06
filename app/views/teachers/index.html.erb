@@ -1,0 +1,15 @@
+<div class="student-admin-list">
+<h2>Student Roster</h2>
+
+<% @students.each do |student| %>
+  <ul>
+    <li>
+        <%= link_to student.full_name, student_path(student) %>
+
+      <%= link_to "Remove Student", student_path(student) , method: :delete, data: { confirm: "Are you sure?" } %> <br>
+    </li>
+  </ul>
+<% end %>
+
+<%= link_to "+ Student", new_student_path %>
+</div>
