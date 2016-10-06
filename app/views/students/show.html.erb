@@ -33,5 +33,5 @@
 
 <% if current_teacher.admin? == true %>
  <%= link_to "Delete Student", student_path(@student) , method: :delete, data: { confirm: "Are you sure?" } %>
- <!--  <%= link_to "Remove from current team", student_path(student, team) , method: :delete, data: { confirm: "Are you sure?" } %> -->
+<%= link_to "Remove from current team", edit_student_path(@student, @student.team) , data: { confirm: "Are you sure?" } %>
  <% end %>

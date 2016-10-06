@@ -19,7 +19,14 @@ class StudentsController < ApplicationController
     else
       render :new
     end
+  end
 
+  def edit
+    @student = Student.find(params[:id])
+    @team = @student.team_id
+    @student.update_attributes(team_id: nil)
+
+    redirect_to team_path(@team)
   end
 
   def destroy
