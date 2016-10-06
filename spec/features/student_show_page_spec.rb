@@ -143,7 +143,6 @@ feature "student's show page" do
         visit student_path(student)
         expect(page).to have_current_path student_path(student)
         expect(page).to have_selector(:link_or_button, "Add to Team")
-
       end
     end
 
