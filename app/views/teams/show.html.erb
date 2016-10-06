@@ -6,6 +6,6 @@
 <% @team.students.each do |student| %>
 <p><h3><%= link_to(student.full_name, student) %></h3></p>
 <% end %>
-<% if @team.students.count < Team.max_students %>
+<% if (@team.students.count < Team.max_students) && (current_teacher.team == @team) %>
   <br><%= link_to '+ student', students_path %>
 <% end %>
