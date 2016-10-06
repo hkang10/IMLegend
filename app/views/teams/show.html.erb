@@ -4,6 +4,6 @@
 <% end %>
 <h3>Teacher: <%= @team.teacher.full_name %></h3>
 <% @team.students.each do |student| %>
-<h3><%=student.full_name %></h3>
+<h3><%= link_to(student.full_name, student) %></h3>
 <% end %>
 <%= link_to '+ student', students_path %>
