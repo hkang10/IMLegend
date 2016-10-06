@@ -23,6 +23,12 @@ class StudentsController < ApplicationController
 
   def edit
     @student = Student.find(params[:id].to_i)
+
+    render 'edit'
+  end
+
+  def update
+    @student = Student.find(params[:id].to_i)
     @student.update_attributes(team_id: nil)
 
     redirect_to student_path(@student)
