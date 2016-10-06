@@ -205,11 +205,13 @@
         1,
         null,
         1,
-        292,
+        299,
         null,
         null,
         1,
         79,
+        null,
+        null,
         null,
         null,
         null
@@ -252,6 +254,14 @@
         1,
         null,
         1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/apprentice/client_project/IMLegend/spec/features/soon_to_be_legends_page_spec.rb": [
@@ -940,7 +950,7 @@
         1,
         null,
         1,
-        0,
+        40,
         null,
         null,
         null
@@ -1019,6 +1029,9 @@
         1,
         0,
         0,
+        0,
+        null,
+        0,
         null,
         0,
         null,
@@ -1026,11 +1039,6 @@
         1,
         0,
         0,
-        null,
-        0,
-        null,
-        null,
-        1,
         0,
         null,
         0,
@@ -1038,12 +1046,18 @@
         0,
         0,
         0,
+        0,
         null,
+        0,
         null,
         null,
         null,
         null,
         0,
+        0,
+        null,
+        null,
+        null,
         0,
         null,
         null,
@@ -1056,6 +1070,6 @@
         null
       ]
     },
-    "timestamp": 1475787592
+    "timestamp": 1475790685
   }
 }

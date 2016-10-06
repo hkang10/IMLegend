@@ -13,6 +13,7 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
+    @student.add_sports(params[:student][:sports_teams])
 
     if @student.save
       redirect_to teachers_path
@@ -52,14 +53,19 @@ class StudentsController < ApplicationController
           @errors = ["You have the maximum number of students (#{Team.max_students})"]
         end
       end
+          redirect_to team_path(@team)
     when 'update_data'
+      if params[:student][:sports_teams] != nil
+        student.add_sports(params[:student][:sports_teams][0])
+      end
+      student.update_attributes(student_params)
+      student.save
+      redirect_to student_path(student)
     when 'remove_from_team'
       student.team.update_attributes(captain_id: nil)
       student.update_attributes(team_id: nil)
-      # redirect_to student_path(student)
-
+      redirect_to team_path(@team)
     end
-    redirect_to team_path(@team)
   end
 
   private
