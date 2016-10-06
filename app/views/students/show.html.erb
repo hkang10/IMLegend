@@ -7,9 +7,10 @@
       <%= f.submit "Make Team Captain" %>
     <% end %>
   <% end %>
-<% else %>
+<% elsif current_teacher.team.students.count < Team.max_students %>
   <%= form_for(@student) do |f| %>
     <%= f.hidden_field :team_id, value: current_teacher.team.id %>
+    <%= f.hidden_field :options, value: 'add_to_team' %>
     <%= f.submit "Add to Team" %>
   <% end %>
 <% end %>
