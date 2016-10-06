@@ -35,6 +35,10 @@
 <% if current_teacher.admin? == true %>
   <%= link_to "Delete Student", student_path(@student) , method: :delete, data: { confirm: "Are you sure?" } %>
   <% if @student.team_id != nil %>
-    <%= link_to "Remove from current team", edit_student_path(@student, @student.team) , data: { confirm: "Are you sure?" } %>
+    <%= form_for(@student) do |f| %>
+      <%= f.hidden_field :team_id, value: @student.team_id %>
+      <%= f.hidden_field :options, value: 'remove_from_team' %>
+      <%= f.submit "Remove From Team" %>
+    <% end %>
   <% end %>
 <% end %>

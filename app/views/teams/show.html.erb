@@ -5,7 +5,6 @@
 <h3>Teacher: <%= @team.teacher.full_name %></h3>
 <% @team.students.each do |student| %>
 <p><h3><%= link_to(student.full_name, student) %></h3></p>
-<%= link_to "Remove from current team", edit_student_path(student, student.team) , data: { confirm: "Are you sure?" } %>  <br>
 <% end %>
 <% if @team.students.count < Team.max_students %>
   <br><%= link_to '+ student', students_path %>
