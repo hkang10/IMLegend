@@ -29,6 +29,9 @@ class StudentsController < ApplicationController
 
   def destroy
     @student = Student.find(params[:id].to_i)
+    if @student.captained_team
+      @student.captained_team.captain = nil
+    end
     @student.destroy
 
     redirect_to teachers_path
@@ -50,6 +53,11 @@ class StudentsController < ApplicationController
         end
       end
     when 'update_data'
+    when 'remove_from_team'
+      student.team.update_attributes(captain_id: nil)
+      student.update_attributes(team_id: nil)
+      # redirect_to student_path(student)
+
     end
     redirect_to team_path(@team)
   end
