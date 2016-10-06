@@ -23,10 +23,9 @@ class StudentsController < ApplicationController
 
   def edit
     @student = Student.find(params[:id].to_i)
-    @team = @student.team_id
     @student.update_attributes(team_id: nil)
 
-    redirect_to team_path(@team)
+    redirect_to student_path(@student)
   end
 
   def destroy
