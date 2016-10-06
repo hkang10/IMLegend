@@ -10,21 +10,27 @@ class TeachersController < ApplicationController
   end
 
   def create
-   @teacher = Teacher.new(teacher_params)
+    @teacher = Teacher.new(teacher_params)
+    if params[:teacher][:access_code] == AccessCode.first.code
 
-   if @teacher.save
-     @team = Team.create(teacher_id: @teacher.id, team_name: params[:teacher][:team_name])
-     session[:teacher_id] = @teacher.id
-     if @teacher.admin? == true
-        @teachers = Teacher.all
-        redirect_to teacher_path
+      if @teacher.save
+       @team = Team.create(teacher_id: @teacher.id, team_name: params[:teacher][:team_name])
+       session[:teacher_id] = @teacher.id
+       if @teacher.admin? == true
+          @teachers = Teacher.all
+          redirect_to teacher_path
+        else
+          redirect_to team_path(@team)
+        end
       else
-        redirect_to team_path(@team)
+       @errors = @teacher.errors.full_messages
+       render :new
       end
-   else
-     @errors = @teacher.errors.full_messages
-     render :new
-   end
+    else
+
+      @errors=['Incorrect access code']
+      render :new
+    end
   end
 
   def edit

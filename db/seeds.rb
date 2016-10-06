@@ -16,3 +16,5 @@ team.save
 admin = Teacher.create!(first_name: 'Admin', last_name: 'Admin', email: 'admin@admin.org', password: 'admin', admin?: true)
 
 admin_team = Team.create!(teacher_id: admin.id, captain_id: nil, team_name: 'Admin Team')
+
+AccessCode.create!(code:'IMLEGEND')
