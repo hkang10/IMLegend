@@ -1,6 +1,23 @@
 <div class="admin-control">
   <h3>Admin Control</h3>
 
-  <%= link_to 'Students', students_path %>
-  <%= f.collection_select :teacher_id, @teachers, :id, :name, include_blank: true %>
+  <%= link_to 'Students', teachers_path  %><br>
+
+
+  <h4>Teachers:</h4>
+  <% Teacher.all.each do |teacher| %>
+    <%= teacher.first_name %> <%= teacher.last_name %>
+      <% if teacher.admin? == true %>
+        (admin)
+        <%= link_to "Remove Admin", edit_teacher_path(teacher) %>
+      <% else %>
+        <%= link_to "Add Admin", edit_teacher_path(teacher) %>
+      <% end %>
+      <br>
+  <% end %>
+
+
 </div>
+
+
+

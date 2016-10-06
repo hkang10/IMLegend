@@ -1,0 +1,35 @@
+<div class="student-form">
+  <h3>Recruit your legendaries.....here</h3>
+  <%= form_for(@student) do |f| %>
+    <p>
+     <%= f.label :first_name %>
+     <%= f.text_field :first_name %>
+    </p>
+    <p>
+     <%= f.label :last_name %>
+     <%= f.text_field :last_name %>
+    </p>
+    <p>
+     <%= f.label :gender %>
+     <%= f.text_field :gender %>
+    </p>
+    <p>
+     <%= f.label :gpa %>
+     <%= f.text_field :gpa %>
+    </p>
+    <p>
+     <%= f.label :number_of_detentions %>
+     <%= f.text_field :number_of_detentions %>
+    </p>
+    <p>
+     <%= f.label :sports_teams %>
+     <%= f.text_field :sports_teams %>
+    </p>
+    <p>
+     <%= f.label :number_of_absences %>
+     <%= f.text_field :number_of_absences %>
+    </p>
+
+   <%= f.submit %>
+ <% end %>
+</div>
