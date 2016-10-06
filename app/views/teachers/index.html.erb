@@ -6,7 +6,7 @@
     <li>
         <%= link_to student.full_name, student_path(student) %>
 
-      <%= link_to "Remove Student", student_path(student) , method: :delete, data: { confirm: "Are you sure?" } %> <br>
+      <%= link_to "Delete Student", student_path(student) , method: :delete, data: { confirm: "Are you sure?" } %> <br>
     </li>
   </ul>
 <% end %>
