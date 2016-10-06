@@ -1,11 +1,15 @@
 class TeachersController < ApplicationController
   protect_from_forgery with: :exception
 
- def new
-   @teacher = Teacher.new
- end
+  # def index
+  #   @teachers = Teacher
+  # end
 
- def create
+  def new
+   @teacher = Teacher.new
+  end
+
+  def create
    @teacher = Teacher.new(teacher_params)
    # binding.pry
 
@@ -13,6 +17,7 @@ class TeachersController < ApplicationController
      @team = Team.create(teacher_id: @teacher.id, team_name: params[:teacher][:team_name])
      session[:teacher_id] = @teacher.id
      if @teacher.admin? == true
+        # @teachers = Teacher.all
         redirect_to teacher_path
       else
         redirect_to team_path(@team)
@@ -21,11 +26,11 @@ class TeachersController < ApplicationController
      @errors = @teacher.errors.full_messages
      render :new
    end
- end
+  end
 
- private
+  private
 
- def teacher_params
+  def teacher_params
    params.require(:teacher).permit(:first_name, :last_name, :email, :password)
- end
+  end
 end
