@@ -938,6 +938,11 @@
         1,
         1,
         1,
+        null,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/apprentice/client_project/IMLegend/spec/routing/application_routing_spec.rb": [
@@ -1026,11 +1031,17 @@
         null,
         null,
         1,
+        0,
+        null,
+        0,
         null,
         0,
         0,
         0,
-        0,
+        null,
+        null,
+        null,
+        null,
         null,
         0,
         0,
@@ -1045,6 +1056,6 @@
         null
       ]
     },
-    "timestamp": 1475787650
+    "timestamp": 1475787592
   }
 }
