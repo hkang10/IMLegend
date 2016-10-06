@@ -5,4 +5,13 @@ class Student < ActiveRecord::Base
   def full_name
     self.first_name + ' ' + self.last_name
   end
+
+
+  def add_sports(sports)
+    self.sports_teams = []
+    arraysport = sports.split(' ')
+    arraysport.each do |sport|
+      self.sports_teams << sport
+    end
+  end
 end

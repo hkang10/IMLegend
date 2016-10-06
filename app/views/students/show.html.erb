@@ -33,6 +33,7 @@
 <h3 class="stats">Absences: <%= @student.number_of_absences %></h3>
 
 <% if current_teacher.admin? == true %>
+  <%= link_to "Edit", edit_student_path(@student) %>
   <%= link_to "Delete Student", student_path(@student) , method: :delete, data: { confirm: "Are you sure?" } %>
   <% if @student.team_id != nil %>
     <%= form_for(@student) do |f| %>
