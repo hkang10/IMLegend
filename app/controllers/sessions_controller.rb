@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   if @teacher && @teacher.authenticate(params[:password])
     session[:teacher_id] = @teacher.id
     if @teacher.admin? == true
-      redirect_to teacher_path
+      redirect_to teacher_path(@teacher)
     else
       redirect_to team_path(@team)
     end

@@ -30,3 +30,8 @@
 <% end %>
 
 <h3 class="stats">Absences: <%= @student.number_of_absences %></h3>
+
+<% if current_teacher.admin? == true %>
+ <%= link_to "Delete Student", student_path(@student) , method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "Remove from current team", edit_student_path(@student, @student.team) , data: { confirm: "Are you sure?" } %>
+ <% end %>
