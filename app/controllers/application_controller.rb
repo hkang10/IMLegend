@@ -4,4 +4,12 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper :all
+
+  def confirm_login
+    if logged_in?
+      yield
+    else
+      redirect_to '/'
+    end
+  end
 end

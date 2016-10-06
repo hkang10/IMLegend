@@ -42,7 +42,7 @@ class StudentsController < ApplicationController
 
     case params[:student][:options]
     when 'add_to_team'
-      if student && student.team == nil
+      if student && student.team == nil && current_teacher.team.id == team_id
         if @team.students.count < Team.max_students
           student.update_attributes(team_id: team_id)
           student.save
