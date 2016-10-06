@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.4'
-
+gem 'simplecov', :require => false, :group => :test
 gem 'mime-types', '2.6.2'
 gem 'mime-types-data', '~> 3.2015'
 gem 'pry'
