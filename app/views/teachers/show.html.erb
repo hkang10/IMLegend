@@ -5,14 +5,10 @@
 
 
   <h4>Teachers:</h4>
-  <select name="teacher[teacher_id]">
-      <% Teacher.all.each do |teacher| %>
-          <option value="<%= teacher.id %>">
-            <%= teacher.first_name %> <%= teacher.last_name %>
-            <% if teacher.admin? == true %>
-              (admin)
-            <% end %>
-          </option>
-      <% end %>
-  </select>
+
+
+
 </div>
+
+
+
