@@ -10,6 +10,8 @@
       <% if teacher.admin? == true %>
         (admin)
         <%= link_to "Remove Admin", edit_teacher_path(teacher) %>
+      <% else %>
+        <%= link_to "Add Admin", edit_teacher_path(teacher) %>
       <% end %>
       <br>
   <% end %>

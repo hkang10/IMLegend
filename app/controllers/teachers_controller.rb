@@ -29,7 +29,11 @@ class TeachersController < ApplicationController
 
   def edit
     @teacher = Teacher.find(params[:id])
-    @teacher.update_attributes(admin?: false)
+    if @teacher.admin? == true
+      @teacher.update_attributes(admin?: false)
+    else
+      @teacher.update_attributes(admin?: true)
+    end
 
     redirect_to teacher_path
   end
