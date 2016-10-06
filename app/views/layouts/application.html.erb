@@ -7,13 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= link_to 'Home', root_path %>
   <% if !logged_in? %>
+    <%= link_to 'Home', root_path %>
     <%= link_to 'New Legend', new_teacher_path %>
   <% else %>
+    <%= link_to 'Home', teams_path %>
     <% if current_teacher.admin? %>
       <%= link_to 'Admin', teachers_path %>
     <% end %>
+    Welcome, <%= current_teacher.full_name %>
     <%= link_to 'Log Out', logout_path, method: :delete %>
   <% end %>
 
