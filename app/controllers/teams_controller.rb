@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
   include TeacherHelper
 
   def show
-    @team = Team.find_by(id: params[:id])
+    @team = Team.find_by(id: params[:id].to_i)
   end
 
   def index
@@ -10,14 +10,14 @@ class TeamsController < ApplicationController
   end
 
   def update
-    team = Team.find_by(id: params[:id])
-    if current_teacher && current_teacher.id == team.teacher_id
-      team.update_attributes(team_params)
-      @errors = ['Something went wrong!'] if !team.save
+    @team = Team.find_by(id: params[:id].to_i)
+    if current_teacher && current_teacher.id == @team.teacher_id
+      @team.update_attributes(team_params)
+      @errors = ['Something went wrong!'] if !@team.save
     else
       @errors = ['Something went wrong!']
     end
-    redirect_to team_path(team)
+    render :show
   end
 
   private

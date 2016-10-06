@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find_by(id: params[:id])
+    @student = Student.find_by(id: params[:id].to_i)
   end
 
   def new
@@ -22,27 +22,28 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    @student = Student.find(params[:id])
-    @team = @student.team_id
+    @student = Student.find(params[:id].to_i)
     @student.update_attributes(team_id: nil)
 
-    redirect_to team_path(@team)
+    redirect_to student_path(@student)
   end
 
   def destroy
-    @student = Student.find(params[:id])
+    @student = Student.find(params[:id].to_i)
     @student.destroy
 
     redirect_to teachers_path
   end
 
   def update
-    student = Student.find_by(id: params[:student][:id])
-    if student.team == nil
-      student.update_attributes(team_id: params[:id])
+
+    student = Student.find_by(id: params[:id].to_i)
+    if student && student.team == nil
+      student.update_attributes(team_id: params[:student][:team_id].to_i)
       student.save
     end
-    redirect_to team_route(params[:id])
+    @team = Team.find_by(id: params[:student][:team_id].to_i)
+    redirect_to team_path(@team)
   end
 
   private
