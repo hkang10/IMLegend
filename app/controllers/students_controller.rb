@@ -36,13 +36,24 @@ class StudentsController < ApplicationController
   end
 
   def update
-
     student = Student.find_by(id: params[:id].to_i)
-    if student && student.team == nil
-      student.update_attributes(team_id: params[:student][:team_id].to_i)
-      student.save
+    team_id = params[:student][:team_id].to_i
+    @team = Team.find_by(id: team_id)
+
+    case params[:student][:options]
+    when 'add_to_team'
+      if student && student.team == nil
+        if @team.students.count < Team.max_students
+          student.update_attributes(team_id: team_id)
+          student.save
+        else
+          @errors = ["You have the maximum number of students (#{Team.max_students})"]
+        end
+      end
+    when 'update_data'
     end
-    @team = Team.find_by(id: params[:student][:team_id].to_i)
+
+
     redirect_to team_path(@team)
   end
 
