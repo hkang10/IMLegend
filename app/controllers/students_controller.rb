@@ -27,13 +27,6 @@ class StudentsController < ApplicationController
     render 'edit'
   end
 
-  def update
-    @student = Student.find(params[:id].to_i)
-    @student.update_attributes(team_id: nil)
-
-    redirect_to student_path(@student)
-  end
-
   def destroy
     @student = Student.find(params[:id].to_i)
     @student.destroy
@@ -43,13 +36,16 @@ class StudentsController < ApplicationController
 
   def update
 
-    student = Student.find_by(id: params[:id].to_i)
-    if student && student.team == nil
-      student.update_attributes(team_id: params[:student][:team_id].to_i)
-      student.save
+    @student = Student.find_by(id: params[:id].to_i)
+    if @student && @student.team == nil
+      @student.update_attributes(team_id: params[:student][:team_id].to_i)
+      @student.save
+      @team = Team.find_by(id: params[:student][:team_id].to_i)
+      redirect_to team_path(@team)
+    else
+      @student.update_attributes(team_id: nil)
+      redirect_to student_path(@student)
     end
-    @team = Team.find_by(id: params[:student][:team_id].to_i)
-    redirect_to team_path(@team)
   end
 
   private
