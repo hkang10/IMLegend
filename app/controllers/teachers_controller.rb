@@ -7,7 +7,6 @@ class TeachersController < ApplicationController
 
  def create
    @teacher = Teacher.new(teacher_params)
-   # binding.pry
 
    if @teacher.save
      @team = Team.create(teacher_id: @teacher.id, team_name: params[:teacher][:team_name])
