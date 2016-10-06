@@ -1,0 +1,5 @@
+<h1 class="title">Soon To Be Legends:</h1>
+<hr>
+<% @students.each do |student| %>
+  <h3><%= link_to(student.full_name, student) %></h3>
+<% end %>
