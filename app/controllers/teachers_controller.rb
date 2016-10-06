@@ -7,14 +7,15 @@ class TeachersController < ApplicationController
 
  def create
    @teacher = Teacher.new(teacher_params)
-   @team = @teacher.team.create(params[:teacher][:team_name])
+   # binding.pry
 
    if @teacher.save
+     @team = Team.create(teacher_id: @teacher.id, team_name: params[:teacher][:team_name])
      session[:teacher_id] = @teacher.id
      if @teacher.admin? == true
         redirect_to teacher_path
       else
-        redirect_to team_path(@teamg)
+        redirect_to team_path(@team)
       end
    else
      @errors = @teacher.errors.full_messages
