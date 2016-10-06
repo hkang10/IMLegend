@@ -8,4 +8,6 @@ module TeacherHelper
     !!current_teacher
   end
 
+
+
 end
