@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#destroy'
 
   get '/admin/:id' => 'teachers#show'
+  get '/admin/index' => 'teachers#index'
 
   resources :teams, only: [:show, :index]
   resources :students

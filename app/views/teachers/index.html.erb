@@ -1,0 +1,9 @@
+<div class="student-admin-list">
+<h2>Student Roster</h2>
+
+<% @students.each do |student| %>
+  <ul>
+    <li><%= student.first_name %> <%= student.last_name %> <br></li>
+  </ul>
+<% end %>
+</div>

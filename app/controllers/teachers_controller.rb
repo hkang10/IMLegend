@@ -1,9 +1,9 @@
 class TeachersController < ApplicationController
   protect_from_forgery with: :exception
 
-  # def index
-  #   @teachers = Teacher
-  # end
+  def index
+    @students = Student.all
+  end
 
   def new
    @teacher = Teacher.new
