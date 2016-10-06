@@ -3,7 +3,6 @@
 
   <%= link_to 'Students', teachers_path  %><br>
 
-
   <h4>Teachers:</h4>
   <% Teacher.all.each do |teacher| %>
     <%= teacher.first_name %> <%= teacher.last_name %>
@@ -14,6 +13,11 @@
         <%= link_to "Add Admin", edit_teacher_path(teacher) %>
       <% end %>
       <br>
+  <% end %>
+  <h4 class="access-code">Change Access Code:</h4>
+  <%= form_for AccessCode.first do |f| %>
+    <%= f.text_field :code, value: '' %>
+    <%= f.submit %>
   <% end %>
 
 

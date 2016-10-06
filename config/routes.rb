@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :teams, only: [:show, :index, :update]
   resources :students
+  resources :access_codes, only: [:update]
 
 end
 
