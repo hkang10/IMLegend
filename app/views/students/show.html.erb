@@ -1,6 +1,6 @@
 <h1 class="title"><%= @student.full_name %></h1>
 <% if @student.team_id !=nil %>
-  <h3>Team: <%= @student.team.team_name %></h3>
+  <h3>Team: <%= link_to @student.team.team_name, team_path(@student.team) %></h3>
   <% if @student.team == current_teacher.team && @student.team.captain != @student %>
     <%= form_for(@student.team) do |f| %>
       <%= f.hidden_field :captain_id, value: @student.id %>
