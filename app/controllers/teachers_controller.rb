@@ -14,7 +14,7 @@ class TeachersController < ApplicationController
      if @teacher.admin? == true
         redirect_to teacher_path
       else
-        redirect_to root_path
+        redirect_to team_path(@teamg)
       end
    else
      @errors = @teacher.errors.full_messages
