@@ -93,24 +93,73 @@ feature "teacher's own home page" do
 
     end
 
-    xscenario "the teacher sees a 'make new captain' button next to each student's name" do
-    end
 
     describe "when the teacher clicks 'make new captain' button" do
 
       it "removes the incumbent captain from captain section" do
+        teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
+        student = Student.create!(first_name: 'Dan', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
+        student2 = Student.create!(first_name: 'Mark', last_name: 'M', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
+        team = Team.create!(teacher_id: teacher.id, captain_id: nil, team_name: 'Probably should have gone with name')
+        student.team = team
+        student2.team = team
+        team.captain = student
+        student.save
+        student2.save
+        team.save
+        visit root_path
+
+        within('.login-form') do
+          fill_in :email, with: 'tmoney@ymail.com'
+          fill_in :password, with: 'password'
+          click_button('Login')
+        end
+        visit team_path(team)
+        expect(page).to have_content("Captain: #{student.full_name}")
+        visit student_path(student2)
+        expect(page).to have_current_path student_path(student2)
+        expect(page).to have_selector(:link_or_button, "Make Team Captain")
+        click_link_or_button("Make Team Captain")
+        expect(page).to have_current_path team_path(team)
+        expect(page).not_to have_content("Captain: #{student.full_name}")
       end
+
 
       it "moves selected student to captain section" do
+        teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
+        student = Student.create!(first_name: 'Dan', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
+        student2 = Student.create!(first_name: 'Mark', last_name: 'M', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
+        team = Team.create!(teacher_id: teacher.id, captain_id: nil, team_name: 'Probably should have gone with name')
+        student.team = team
+        student2.team = team
+        team.captain = student
+        student.save
+        student2.save
+        team.save
+        visit root_path
+
+        within('.login-form') do
+          fill_in :email, with: 'tmoney@ymail.com'
+          fill_in :password, with: 'password'
+          click_button('Login')
+        end
+        visit team_path(team)
+        expect(page).to have_content("Captain: #{student.full_name}")
+        visit student_path(student2)
+        expect(page).to have_current_path student_path(student2)
+        expect(page).to have_selector(:link_or_button, "Make Team Captain")
+        click_link_or_button("Make Team Captain")
+        expect(page).to have_current_path team_path(team)
+        expect(page).to have_content("Captain: #{student2.full_name}")
       end
     end
 
-    describe "when the teacher clicks 'remove captain' button" do
-      it "removes the incumbent captain from captain section" do
-      end
+    # describe "when the teacher clicks 'remove captain' button" do
+    #   it "removes the incumbent captain from captain section" do
+    #   end
 
-      it "leaves the captain section empty" do
-      end
-    end
+    #   it "leaves the captain section empty" do
+    #   end
+    # end
   end
 end

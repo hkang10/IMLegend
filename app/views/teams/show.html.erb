@@ -1,6 +1,6 @@
 <h2> <%= @team.team_name %></h2>
 <% if @team.captain %>
-  <h3> <%= @team.captain.full_name %> </h3>
+  <h3>Captain: <%= @team.captain.full_name %> </h3>
 <% end %>
 <h3>Teacher: <%= @team.teacher.full_name %></h3>
 <% @team.students.each do |student| %>

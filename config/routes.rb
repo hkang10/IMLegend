@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get '/admin/:id' => 'teachers#show'
   get '/admin/index' => 'teachers#index'
 
-  resources :teams, only: [:show, :index]
+  resources :teams, only: [:show, :index, :update]
   resources :students
 
 end
