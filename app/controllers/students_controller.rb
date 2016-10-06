@@ -16,7 +16,13 @@ class StudentsController < ApplicationController
   def destroy
   end
 
-  def temp
+  def update
+    student = Student.find_by(id: params[:student][:id])
+    if student.team == nil
+      student.update_attributes(team_id: params[:id])
+      student.save
+    end
+    redirect_to team_route(params[:id])
   end
 
 end
