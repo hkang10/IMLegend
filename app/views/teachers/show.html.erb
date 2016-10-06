@@ -1,12 +1,18 @@
 <div class="admin-control">
   <h3>Admin Control</h3>
 
-  <%= link_to 'Students', students_path %>
+  <%= link_to 'Students', students_path %><br>
 
 
-<select name="teacher[teacher_id]">
-    <% Teacher.all.each do |teacher| %>
-        <option value="<%= teacher.id %>"><%= teacher.first_name %> <%= teacher.last_name %></option>
-    <% end %>
-</select>
+  <h4>Teachers:</h4>
+  <select name="teacher[teacher_id]">
+      <% Teacher.all.each do |teacher| %>
+          <option value="<%= teacher.id %>">
+            <%= teacher.first_name %> <%= teacher.last_name %>
+            <% if teacher.admin? == true %>
+              (admin)
+            <% end %>
+          </option>
+      <% end %>
+  </select>
 </div>
