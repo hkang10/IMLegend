@@ -5,6 +5,10 @@ class TeamsController < ApplicationController
     @team = Team.find_by(id: params[:id])
   end
 
+  def index
+    @teams = Team.all
+  end
+
   def update
     team = Team.find_by(id: params[:id])
     if current_teacher && current_teacher.id == team.teacher_id

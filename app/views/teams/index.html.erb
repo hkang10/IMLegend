@@ -1,0 +1,13 @@
+<h1>All teams</h1>
+<% @teams.each do |team| %>
+  <% if team.teacher.first_name.downcase != 'admin' %>
+    <h3><%= link_to team.team_name, team_path(team) %></h3>
+      <ul>
+        <li><%= team.teacher.full_name %></li>
+        <li><%= team.students.count %> students</li>
+        <% if team.captain_id != nil %>
+        <li>Captain: <%= link_to(team.captain.full_name, student_path(team.captain))  %></li>
+        <% end %>
+      </ul>
+  <% end %>
+<% end %>

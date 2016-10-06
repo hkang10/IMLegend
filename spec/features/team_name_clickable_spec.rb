@@ -60,9 +60,7 @@ feature "team names are clickable" do
       end
       team2.students.each do |student|
         visit student_path(student)
-        p team_path(team)
-        p team
-        expect(page).to have_link(student.team.team_name, :href => team_path(team))
+        expect(page).to have_link(student.team.team_name, :href => team_path(team2))
       end
     end
   end
