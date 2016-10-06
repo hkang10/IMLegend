@@ -16,7 +16,7 @@ class TeachersController < ApplicationController
      @team = Team.create(teacher_id: @teacher.id, team_name: params[:teacher][:team_name])
      session[:teacher_id] = @teacher.id
      if @teacher.admin? == true
-        # @teachers = Teacher.all
+        @teachers = Teacher.all
         redirect_to teacher_path
       else
         redirect_to team_path(@team)
@@ -25,6 +25,13 @@ class TeachersController < ApplicationController
      @errors = @teacher.errors.full_messages
      render :new
    end
+  end
+
+  def edit
+    @teacher = Teacher.find(params[:id])
+    @teacher.update_attributes(admin?: false)
+
+    redirect_to teacher_path
   end
 
   def destroy
