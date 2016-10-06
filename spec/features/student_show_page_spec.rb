@@ -161,10 +161,6 @@ feature "student's show page" do
           fill_in :password, with: 'password'
           click_button('Login')
         end
-        p student
-        p student_path(student)
-        p team
-        p teacher
 
         visit student_path(student)
         expect(page).to have_current_path student_path(student)
