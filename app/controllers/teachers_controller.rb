@@ -28,7 +28,7 @@ class TeachersController < ApplicationController
   end
 
   def edit
-    @teacher = Teacher.find(params[:id])
+    @teacher = Teacher.find(params[:id].to_i)
     if @teacher.admin? == true
       @teacher.update_attributes(admin?: false)
     else
@@ -39,7 +39,7 @@ class TeachersController < ApplicationController
   end
 
   def destroy
-    @teacher = Teacher.find(params[:id])
+    @teacher = Teacher.find(params[:id].to_i)
     @teacher.destroy
 
     redirect_to teacher_path
