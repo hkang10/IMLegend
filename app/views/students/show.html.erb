@@ -1,0 +1,17 @@
+<h1 class="title"><%= @student.full_name %></h1>
+<hr>
+<h2 class="stats">GPA: <%= @student.gpa %></h2>
+<h2 class="stats">Gender: <%= @student.gender %></h2>
+<h2 class="stats">Detentions: <%= @student.number_of_detentions %></h2>
+<h2 class="stats">Current teams:</h2>
+<% if !@student.sports_teams.empty? %>
+  <ul>
+    <% @student.sports_teams.each do |team| %>
+      <li><%= team %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p><%= @student.first_name %> is not currently on  any sports teams</p>
+<% end %>
+
+<h2 class="stats">Absences: <%= @student.number_of_absences %></h2>

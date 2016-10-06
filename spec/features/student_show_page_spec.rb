@@ -3,7 +3,7 @@ require "rails_helper"
 feature "student's show page" do
   describe "when teacher navigates to a student's show page" do
 
-    xscenario "the teacher sees the student's name" do
+    scenario "the teacher sees the student's name" do
       teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
       student = Student.create!(first_name: 'Dan', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
       team = Team.create!(teacher_id: teacher.id, captain_id: student.id, team_name: 'Probably should have gone with name')
@@ -17,10 +17,10 @@ feature "student's show page" do
 
       visit student_path(student)
       expect(page).to have_current_path student_path(student)
-      expect(page).to have_content student.first_name, student.last_name
+      expect(page).to have_content student.full_name
     end
 
-    xscenario "the teacher sees the student's gpa" do
+    scenario "the teacher sees the student's gpa" do
       teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
       student = Student.create!(first_name: 'Dan', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
       team = Team.create!(teacher_id: teacher.id, captain_id: student.id, team_name: 'Probably should have gone with name')
@@ -37,7 +37,7 @@ feature "student's show page" do
       expect(page).to have_content student.gpa
     end
 
-    xscenario "the teacher sees the student's gender" do
+    scenario "the teacher sees the student's gender" do
       teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
       student = Student.create!(first_name: 'Dan', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
       team = Team.create!(teacher_id: teacher.id, captain_id: student.id, team_name: 'Probably should have gone with name')
@@ -51,10 +51,10 @@ feature "student's show page" do
 
       visit student_path(student)
       expect(page).to have_current_path student_path(student)
-      expect(page).to have_content student.gender
+      expect(page).to have_content "Gender: #{student.gender}"
     end
 
-    xscenario "the teacher sees the student's number of detention" do
+    scenario "the teacher sees the student's number of detention" do
       teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
       student = Student.create!(first_name: 'Dan', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
       team = Team.create!(teacher_id: teacher.id, captain_id: student.id, team_name: 'Probably should have gone with name')
@@ -71,7 +71,7 @@ feature "student's show page" do
       expect(page).to have_content student.number_of_detentions
     end
 
-    xscenario "the teacher sees the student's sports team" do
+    scenario "the teacher sees the student's sports team" do
       teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
       student = Student.create!(first_name: 'Dan', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
       team = Team.create!(teacher_id: teacher.id, captain_id: student.id, team_name: 'Probably should have gone with name')
@@ -89,7 +89,7 @@ feature "student's show page" do
 
     end
 
-    xscenario "the teacher sees the student's number of absences" do
+    scenario "the teacher sees the student's number of absences" do
       teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
       student = Student.create!(first_name: 'Dan', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
       team = Team.create!(teacher_id: teacher.id, captain_id: student.id, team_name: 'Probably should have gone with name')
