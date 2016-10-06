@@ -1,9 +1,24 @@
 <h1 class="title"><%= @student.full_name %></h1>
+<% if @student.team_id !=nil %>
+  <h3>Team: <%= @student.team.team_name %></h3>
+  <% if @student.team == current_teacher.team && @student.team.captain != @student %>
+    <%= form_for(@student.team) do |f| %>
+      <%= f.hidden_field :captain_id, value: @student.id %>
+      <%= f.submit "Make Team Captain" %>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= form_for(@student) do |f| %>
+    <%= f.hidden_field :team_id, value: current_teacher.team.id %>
+    <%= f.submit "Add to Team" %>
+  <% end %>
+<% end %>
 <hr>
-<h2 class="stats">GPA: <%= @student.gpa %></h2>
-<h2 class="stats">Gender: <%= @student.gender %></h2>
-<h2 class="stats">Detentions: <%= @student.number_of_detentions %></h2>
-<h2 class="stats">Current teams:</h2>
+<h2>statistics</h2>
+<h3 class="stats">GPA: <%= @student.gpa %></h3>
+<h3 class="stats">Gender: <%= @student.gender %></h3>
+<h3 class="stats">Detentions: <%= @student.number_of_detentions %></h3>
+<h3 class="stats">Current teams:</h3>
 <% if !@student.sports_teams.empty? %>
   <ul>
     <% @student.sports_teams.each do |team| %>
@@ -14,4 +29,4 @@
   <p><%= @student.first_name %> is not currently on  any sports teams</p>
 <% end %>
 
-<h2 class="stats">Absences: <%= @student.number_of_absences %></h2>
+<h3 class="stats">Absences: <%= @student.number_of_absences %></h3>
