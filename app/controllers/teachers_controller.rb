@@ -35,15 +35,21 @@ class TeachersController < ApplicationController
         end
       else
        @errors = @teacher.errors.full_messages + @team.errors.full_messages
-       render :new
+       respond_to do |format|
+        format.html { render :new }
+        format.js {}
+       end
       end
     else
       @errors=['Incorrect access code or blank team name']
-      render :new
+      respond_to do |format|
+        format.html { render :new }
+        format.js {}
+       end
     end
   end
 
-  def edit
+  def update
     confirm_login{
       @teacher = Teacher.find(params[:id].to_i)
       if @teacher.admin? == true
@@ -51,8 +57,10 @@ class TeachersController < ApplicationController
       else
         @teacher.update_attributes(admin?: true)
       end
-
-      redirect_to teacher_path
+      respond_to do |format|
+        format.html { redirect_to teacher_path }
+        format.js {}
+      end
     }
   end
 

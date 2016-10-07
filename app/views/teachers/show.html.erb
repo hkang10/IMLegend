@@ -1,7 +1,6 @@
 <div id="admin-control">
   <h3>Admin Control</h3>
 </div>
-
 <div class="flex-boxes">
   <div class="flex-box">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
@@ -13,12 +12,11 @@
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
     <h1 class="flex-title">Teachers:</h1>
     <div>  <% Teacher.all.each do |teacher| %>
-      <%= teacher.first_name %> <%= teacher.last_name %>
+      <span id="teacher-<%=teacher.id%>"><%= teacher.first_name %> <%= teacher.last_name %> (admin)</span>
         <% if teacher.admin? == true %>
-          (admin)
-          <%= link_to "Remove Admin", edit_teacher_path(teacher) %>
+          <%= link_to "Remove Admin", teacher_path(teacher), remote: true, method: 'patch' %>
         <% else %>
-          <%= link_to "Add Admin", edit_teacher_path(teacher) %>
+          <%= link_to "Add Admin", teacher_path(teacher), remote: true, method: 'patch' %>
         <% end %>
         <br>
       <% end %>
@@ -28,9 +26,9 @@
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
     <h1 class="flex-title">Change Access Code:</h1>
     <div>
-      <%= form_for AccessCode.first do |f| %>
-        <%= f.text_field :code, value: '' %>
-        <%= f.submit %>
+      <%= form_for(AccessCode.first, remote: true) do |f| %>
+    <%= f.text_field :code, value: '' %>
+    <%= f.submit %>
       <% end %>
     </div>
   </a>
