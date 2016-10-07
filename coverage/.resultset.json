@@ -180,6 +180,12 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
         null,
         null,
         null
@@ -190,6 +196,8 @@
         null,
         null,
         1,
+        0,
+        0,
         0,
         0,
         null,
@@ -217,11 +225,11 @@
         1,
         null,
         1,
-        391,
+        389,
         null,
         null,
         1,
-        138,
+        136,
         null,
         null,
         null,
@@ -232,7 +240,7 @@
         1,
         null,
         1,
-        33,
+        31,
         31,
         null,
         null,
@@ -274,10 +282,10 @@
         1,
         null,
         1,
-        59,
+        57,
         57,
         null,
-        2,
+        0,
         null,
         null,
         null
@@ -895,6 +903,7 @@
         0,
         0,
         null,
+        0,
         null,
         null
       ],
@@ -1026,6 +1035,7 @@
       "/Users/apprentice/wow-me/IMLegend/app/controllers/students_controller.rb": [
         1,
         1,
+        1,
         5,
         5,
         null,
@@ -1105,6 +1115,11 @@
         0,
         null,
         null,
+        null,
+        null,
+        1,
+        0,
+        0,
         null,
         null,
         1,
@@ -1116,6 +1131,6 @@
         null
       ]
     },
-    "timestamp": 1475847485
+    "timestamp": 1475853179
   }
 }
