@@ -4,13 +4,13 @@
 
 <div class="flex-boxes">
   <div class="flex-box">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <img src="http://www.freeiconspng.com/uploads/school-student-icon-16.png" alt="">
     <h1 class="flex-title">View Student Roster:
     </h1>
     <div class="clear-flex-box"><%= link_to 'Students', admin_students_path  %></div>
   </div>
   <div class="flex-box flex-box-big">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <img src="https://cdn0.iconfinder.com/data/icons/education-15/500/teacher-512.png" alt="">
     <h1 class="flex-title">Teachers:</h1>
     <div>  <% Teacher.all.each do |teacher| %>
       <span id="teacher-<%=teacher.id%>"><%= teacher.first_name %> <%= teacher.last_name %> (admin)</span>
@@ -24,7 +24,7 @@
     </div>
   </div>
   <a href="javascript:void(0)" class="flex-box">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <img src="https://openclipart.org/image/2400px/svg_to_png/68545/lock2.png" alt="">
     <h1 class="flex-title">Change Access Code:</h1>
     <div>
       <%= form_for(AccessCode.first, remote: true) do |f| %>
@@ -34,7 +34,7 @@
     </div>
   </a>
   <div class="flex-box">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <img src="http://downloadicons.net/sites/default/files/upload-icon-72713.png" alt="">
     <h1 class="flex-title">Upload students database:</h1>
       <div class="csv-upload">
         <%= form_tag({action: :upload, controller: 'students'}, multipart: true) do %>

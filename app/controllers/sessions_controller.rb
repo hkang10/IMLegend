@@ -2,6 +2,9 @@ class SessionsController < ApplicationController
  protect_from_forgery with: :exception
 
  def new
+  if current_teacher
+    redirect_to team_path(current_teacher.team)
+  end
  end
 
  def create
