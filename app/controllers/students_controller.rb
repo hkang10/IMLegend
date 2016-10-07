@@ -52,16 +52,16 @@ include AdminsHelper
 
   def update
     confirm_login{
-      student = Student.find_by(id: params[:id].to_i)
+      @student = Student.find_by(id: params[:id].to_i)
       team_id = params[:student][:team_id].to_i
       @team = Team.find_by(id: team_id)
 
       case params[:student][:options]
       when 'add_to_team'
-        if student && student.team == nil && current_teacher.team.id == team_id
+        if @student && @student.team == nil && current_teacher.team.id == team_id
           if @team.students.count < Team.max_students
-            student.update_attributes(team_id: team_id)
-            student.save
+            @student.update_attributes(team_id: team_id)
+            @student.save
           else
             @errors = ["You have the maximum number of students (#{Team.max_students})"]
           end
@@ -69,14 +69,17 @@ include AdminsHelper
             redirect_to team_path(@team)
       when 'update_data'
         if params[:student][:sports_teams] != nil
-          student.add_sports(params[:student][:sports_teams][0])
+          @student.add_sports(params[:student][:sports_teams][0])
         end
-        student.update_attributes(student_params)
-        student.save
-        redirect_to student_path(student)
+        @student.update_attributes(student_params)
+        if !@student.save
+          @errors = @student.errors.full_messages
+          @student = Student.find(@student.id)
+        end
+        render :edit
       when 'remove_from_team'
-        student.team.update_attributes(captain_id: nil)
-        student.update_attributes(team_id: nil)
+        @student.team.update_attributes(captain_id: nil)
+        @student.update_attributes(team_id: nil)
         redirect_to team_path(@team)
       end
     }

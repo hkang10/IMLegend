@@ -10,7 +10,8 @@ class ApplicationController < ActionController::Base
     if logged_in?
       yield
     else
-      redirect_to '/'
+      @errors = ['Please login to continue']
+      render :'/sessions/new'
     end
   end
 end

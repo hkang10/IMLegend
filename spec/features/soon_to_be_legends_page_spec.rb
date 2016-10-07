@@ -21,9 +21,9 @@ feature "soon to be legends page" do
     scenario "the teacher sees all/only available students" do
       teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
       student = Student.create!(first_name: 'Dan', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
-      student2 = Student.create!(first_name: 'Mark', last_name: 'McGuire', gender: 'F', gpa: 9.5, number_of_detentions: 0, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 182, team_id: nil)
+      student2 = Student.create!(first_name: 'Mark', last_name: 'McGuire', gender: 'F', gpa: 4.8, number_of_detentions: 0, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 180, team_id: nil)
       student3 = Student.create!(first_name: 'bob', last_name: 'D', gender: 'm', gpa: 2.5, number_of_detentions: 8, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 99, team_id: nil)
-      student4 = Student.create!(first_name: 'eric', last_name: 'McGuire', gender: 'F', gpa: 9.5, number_of_detentions: 0, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 182, team_id: nil)
+      student4 = Student.create!(first_name: 'eric', last_name: 'McGuire', gender: 'F', gpa: 4.8, number_of_detentions: 0, sports_teams: ['Football', 'Foosball', 'Sand Hockey'], number_of_absences: 180, team_id: nil)
       team = Team.create!(teacher_id: teacher.id, captain_id: student.id, team_name: 'Probably should have gone with name')
       team.students = [student, student2]
       team.save
