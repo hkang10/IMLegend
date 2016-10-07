@@ -1,13 +1,12 @@
 <div class="cards">
   <div class="card">
     <div class="card-image">
-      <img src="https://unsplash.com/collections/158350/wolves?photo=dbRzRdHfXho" alt="">
+      <%= image_tag("wolf.jpeg", :alt => "rss feed") %>
     </div>
+
     <div class="card-header">
       <h1 class="title"><%= @student.full_name %></h1>
     </div>
-
-
 
 <% if @student.team_id !=nil %>
   <h3 id="team">Team <br> <%= link_to @student.team.team_name, team_path(@student.team) %></h3><hr>
@@ -38,6 +37,7 @@
     <% end %>
   </div>
 </div><!-- Close card -->
+
 
 <!-- forms -->
 

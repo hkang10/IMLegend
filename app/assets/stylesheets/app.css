@@ -244,7 +244,7 @@ hr {
     margin-right: 0; }
   .card .card-image {
     background-color: #F8F2B4;
-    height: 150px;
+    height: 650px;
     max-height: 150px;
     overflow: hidden; }
     .card .card-image img {
@@ -282,9 +282,6 @@ hr {
 #team {
   margin-top: 15px;
   padding-left: 12px; }
-
-p {
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
 body {
   -webkit-font-smoothing: antialiased; }
