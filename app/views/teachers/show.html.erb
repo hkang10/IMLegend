@@ -15,7 +15,7 @@
       <br>
   <% end %>
   <h4 class="access-code">Change Access Code:</h4>
-  <%= form_for AccessCode.first do |f| %>
+  <%= form_for(AccessCode.first, remote: true) do |f| %>
     <%= f.text_field :code, value: '' %>
     <%= f.submit %>
   <% end %>
