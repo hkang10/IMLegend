@@ -9,7 +9,7 @@
       <li><%= link_to 'All Teams', teams_path %></li>
       <li><%= link_to 'My Team', team_path(current_teacher.team) %></li>
       <% if current_teacher.admin? %>
-        <li><%= link_to 'Admin', teacher_path(current_teacher) %></li>
+        <li><%= link_to 'Admin', '/admin' %></li>
       <% end %>
       <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
     </ul>
