@@ -1,5 +1,4 @@
 class TeamsController < ApplicationController
-  include TeacherHelper
 
   def show
     @team = Team.find_by(id: params[:id].to_i)

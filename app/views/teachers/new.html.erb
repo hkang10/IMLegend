@@ -18,7 +18,10 @@
    <%= f.password_field :password %>
   </p>
   <p>
-   Access Code:<%= f.text_field :access_code, value: '' %>
+    Choose a Team Name <%= f.text_field :team_name, value: ''%>
+  </p>
+  <p>
+   Access Code <%= f.text_field :access_code, value: '' %>
  </p>
  <%= f.submit %>
  <% end %>

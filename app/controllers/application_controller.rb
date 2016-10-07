@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper :all
+  include TeacherHelper
 
   def confirm_login
     if logged_in?
