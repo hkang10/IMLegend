@@ -12,7 +12,13 @@ Rails.application.routes.draw do
   get '/admin/index' => 'teachers#index'
 
   resources :teams, only: [:show, :index, :update]
-  resources :students
+  resources :students do
+    collection do
+      post 'upload' => 'students#upload'
+    end
+  end
+
+
   resources :access_codes, only: [:update]
 
 end

@@ -13,5 +13,6 @@ class Student < ActiveRecord::Base
     arraysport.each do |sport|
       self.sports_teams << sport
     end
+    self.save
   end
 end

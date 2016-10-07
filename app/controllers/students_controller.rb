@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+include AdminsHelper
   def index
     confirm_login {
       @students = Student.where(team_id: nil)
@@ -79,6 +80,11 @@ class StudentsController < ApplicationController
         redirect_to team_path(@team)
       end
     }
+  end
+
+  def upload
+    AdminsHelper.csv_parse(params[:csv].tempfile.to_path.to_s)
+    redirect_to '/students'
   end
 
   private
