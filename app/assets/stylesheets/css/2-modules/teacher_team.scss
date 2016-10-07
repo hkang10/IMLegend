@@ -104,3 +104,18 @@
     }
   }
 }
+
+
+#team-list {
+  width: 15%;
+}
+
+#teacher {
+  font-weight: normal;
+}
+
+#teams-table {
+  @include shift(5);
+  padding-top: 15px;
+  width: 100%;
+}
