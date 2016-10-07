@@ -39,9 +39,9 @@
       <div class="csv-upload">
         <%= form_tag({action: :upload, controller: 'students'}, multipart: true) do %>
         <%= file_field_tag 'csv' %>
-      </div>
-        <%= submit_tag 'Upload' %>
+        <div id='upload-button'><%= submit_tag 'Upload' %></div>
         <% end %>
+      </div>
   </div>
 </div>
 
