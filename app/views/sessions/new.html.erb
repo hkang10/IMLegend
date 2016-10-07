@@ -1,5 +1,6 @@
 <div class="login-form">
   <h3>Continue your legend.......here</h3>
+  <%= render 'partials/errors', layout: false %>
  <%= form_tag '/login' do %>
  <p>
    Email: <%= email_field_tag :email %>
