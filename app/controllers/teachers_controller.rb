@@ -35,11 +35,17 @@ class TeachersController < ApplicationController
         end
       else
        @errors = @teacher.errors.full_messages + @team.errors.full_messages
-       render :new
+       respond_to do |format|
+        format.html { render :new }
+        format.js {}
+       end
       end
     else
       @errors=['Incorrect access code or blank team name']
-      render :new
+      respond_to do |format|
+        format.html { render :new }
+        format.js {}
+       end
     end
   end
 

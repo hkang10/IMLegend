@@ -1,7 +1,9 @@
 <div class="student-form">
     <h3>Recruit your legendaries.....here</h3>
-    <%= render 'partials/errors', layout: false %>
-    <%= form_for(@student) do |f| %>
+    <div class="error-container">
+        <%= render 'partials/errors', layout: false %>
+    </div>
+    <%= form_for(@student, remote: true) do |f| %>
         <p>
             <%= f.label :first_name %>
             <%= f.text_field :first_name %>
