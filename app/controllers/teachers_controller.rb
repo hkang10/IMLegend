@@ -21,7 +21,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
     team_name = params[:teacher][:team_name]
     @team = Team.new(team_name: team_name)
-    if params[:teacher][:access_code] == AccessCode.first.code && team_name.length > 1
+    if params[:teacher][:access_code] == AccessCode.first.code && team_name.length >= 1
 
       if @teacher.save
        @team = Team.create(teacher_id: @teacher.id, team_name: team_name)
@@ -30,6 +30,7 @@ class TeachersController < ApplicationController
           @teachers = Teacher.all
           redirect_to teacher_path
         else
+          binding.pry
           redirect_to team_path(@team)
         end
       else
@@ -37,8 +38,7 @@ class TeachersController < ApplicationController
        render :new
       end
     else
-
-      @errors=['Incorrect access code']
+      @errors=['Incorrect access code or blank team name']
       render :new
     end
   end

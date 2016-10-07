@@ -1,6 +1,45 @@
-<h1 class="title"><%= @student.full_name %></h1>
+<div class="cards">
+  <div class="card">
+    <div class="card-image">
+      <%= image_tag("wolf.jpeg", :alt => "rss feed") %>
+    </div>
+    <!-- header -->
+    <div class="card-header">
+      <h2>Student Profile</h2>
+      <p id="student-name"><%= @student.full_name %></p>
+    </div>
+    <!-- stats -->
+    <h2>Statistics</h2>
+      <div class="stats">
+        <ul>
+          <li><%= @student.gpa %><span>GPA</span> </li>
+          <li> <%= @student.gender %><span> Gender</span></li>
+          <li> <%= @student.number_of_detentions %><span>Detentions</span></li>
+          <li><%= @student.number_of_absences %><span>Absences</span></li>
+      </ul>
+    </div>
+    <br>
+    <hr>
+      <!-- Current sports teams -->
+      <h2>Current teams</h3>
+      <% if !@student.sports_teams.empty? %>
+        <ul>
+          <% @student.sports_teams.each do |team| %>
+            <li><%= team %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p id="no-teams"><%= @student.first_name %> is not currently on  any sports teams.</p>
+      <% end %>
+    <br>
+    <hr>
+<!-- Team name -->
 <% if @student.team_id !=nil %>
-  <h3>Team: <%= link_to @student.team.team_name, team_path(@student.team) %></h3>
+  <h3 id="team">Team <br> <%= link_to @student.team.team_name, team_path(@student.team) %></h3><hr>
+      <!-- Stats -->
+  </div>
+</div><!-- Close card -->
+<!-- forms -->
   <% if @student.team == current_teacher.team && @student.team.captain != @student %>
     <%= form_for(@student.team) do |f| %>
       <%= f.hidden_field :captain_id, value: @student.id %>
@@ -14,23 +53,8 @@
     <%= f.submit "Add to Team" %>
   <% end %>
 <% end %>
-<hr>
-<h2>statistics</h2>
-<h3 class="stats">GPA: <%= @student.gpa %></h3>
-<h3 class="stats">Gender: <%= @student.gender %></h3>
-<h3 class="stats">Detentions: <%= @student.number_of_detentions %></h3>
-<h3 class="stats">Current teams:</h3>
-<% if !@student.sports_teams.empty? %>
-  <ul>
-    <% @student.sports_teams.each do |team| %>
-      <li><%= team %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p><%= @student.first_name %> is not currently on  any sports teams</p>
-<% end %>
 
-<h3 class="stats">Absences: <%= @student.number_of_absences %></h3>
+<!-- Admin Controls -->
 
 <% if current_teacher.admin? == true %>
   <%= link_to "Edit", edit_student_path(@student) %>
@@ -43,3 +67,4 @@
     <% end %>
   <% end %>
 <% end %>
+

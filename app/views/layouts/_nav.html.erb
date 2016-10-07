@@ -1,0 +1,33 @@
+<button type="button" class="js-menu-trigger sliding-panel-button">
+  Menu
+</button>
+
+<% if !logged_in? %> 
+<nav class="js-menu sliding-panel-content">
+  <ul>
+    <li><a href="javascript:void(0)"><%= link_to 'Home', root_path %> </a></li>
+    <li><a href="javascript:void(0)"><%= link_to 'New Legend', new_teacher_path %></a></li>
+    </ul>
+    </nav>
+
+  <% else %>
+  Welcome, <%= current_teacher.full_name %>
+  <nav class="js-menu sliding-panel-content">
+    <ul>
+      <li><a href="javascript:void(0)"><%= link_to 'Yet to be Legendary Students', students_path %></a></li>
+      <li><a href="javascript:void(0)"><%= link_to 'All Teams', teams_path %></a></li>
+      <li><a href="javascript:void(0)"><%= link_to 'My Team', team_path(current_teacher.team) %></a></li>
+      <% if current_teacher.admin? %>
+        <li><a href="javascript:void(0)"><%= link_to 'Admin', teacher_path(current_teacher) %></a></li>
+      <% end %>
+      
+      <li><a href="javascript:void(0)"><%= link_to 'Log Out', logout_path, method: :delete %></a></li>
+    </ul>
+  </nav>
+  <% end %>
+
+<div class="js-menu-screen sliding-panel-fade-screen"></div>
+
+
+
+

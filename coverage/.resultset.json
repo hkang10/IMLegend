@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/wow-me/IMLegend/config/environment.rb": [
+      "/Users/apprentice/client_project/IMLegend/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/application.rb": [
+      "/Users/apprentice/client_project/IMLegend/config/application.rb": [
         1,
         null,
         1,
@@ -36,12 +36,12 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/boot.rb": [
+      "/Users/apprentice/client_project/IMLegend/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/environments/test.rb": [
+      "/Users/apprentice/client_project/IMLegend/config/environments/test.rb": [
         1,
         null,
         null,
@@ -85,7 +85,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/assets.rb": [
+      "/Users/apprentice/client_project/IMLegend/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -95,39 +95,12 @@
         null,
         null,
         null,
-        null,
-        null
-      ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/backtrace_silencers.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/cookies_serializer.rb": [
-        null,
-        null,
-        1
-      ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/inflections.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/Users/apprentice/client_project/IMLegend/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -136,18 +109,47 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/mime_types.rb": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/session_store.rb": [
+      "/Users/apprentice/client_project/IMLegend/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/wrap_parameters.rb": [
+      "/Users/apprentice/client_project/IMLegend/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/apprentice/client_project/IMLegend/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/client_project/IMLegend/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/apprentice/client_project/IMLegend/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/apprentice/client_project/IMLegend/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -163,7 +165,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/routes.rb": [
+      "/Users/apprentice/client_project/IMLegend/config/routes.rb": [
         1,
         null,
         null,
@@ -190,7 +192,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/helpers/admins_helper.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/helpers/admins_helper.rb": [
         1,
         1,
         null,
@@ -206,11 +208,11 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/helpers/application_helper.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/helpers/student_helper.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/helpers/student_helper.rb": [
         1,
         1,
         0,
@@ -221,7 +223,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/helpers/teacher_helper.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/helpers/teacher_helper.rb": [
         1,
         null,
         1,
@@ -236,7 +238,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/controllers/teams_controller.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/controllers/teams_controller.rb": [
         1,
         null,
         1,
@@ -272,7 +274,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/controllers/application_controller.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -286,11 +288,12 @@
         57,
         null,
         0,
+        0,
         null,
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/soon_to_be_legends_page_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/features/soon_to_be_legends_page_spec.rb": [
         1,
         null,
         1,
@@ -359,7 +362,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/student_name_clickable_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/features/student_name_clickable_spec.rb": [
         1,
         null,
         1,
@@ -425,29 +428,11 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/student_show_page_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/features/student_show_page_spec.rb": [
         1,
         null,
         1,
         1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
         1,
         1,
         1,
@@ -459,10 +444,29 @@
         1,
         1,
         null,
+        1,
+        null,
+        1,
+        1,
+        null,
         null,
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         1,
@@ -598,7 +602,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/teacher_home_page_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/features/teacher_home_page_spec.rb": [
         1,
         null,
         1,
@@ -765,7 +769,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/team_name_clickable_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/features/team_name_clickable_spec.rb": [
         1,
         null,
         1,
@@ -835,10 +839,10 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/teams_index_page_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/features/teams_index_page_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/models/student_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/models/student_spec.rb": [
         1,
         null,
         1,
@@ -883,11 +887,22 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/models/student.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/models/student.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -896,7 +911,6 @@
         104,
         null,
         null,
-        null,
         1,
         0,
         0,
@@ -907,7 +921,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/models/teacher_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/models/teacher_spec.rb": [
         1,
         null,
         1,
@@ -942,18 +956,25 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/models/teacher.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/models/teacher.rb": [
+        1,
         1,
         1,
         null,
         1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
         null,
         1,
         91,
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/models/team_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/models/team_spec.rb": [
         1,
         null,
         1,
@@ -979,9 +1000,12 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/models/team.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/models/team.rb": [
         1,
         1,
+        1,
+        1,
+        null,
         1,
         1,
         null,
@@ -991,19 +1015,19 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/routing/application_routing_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/routing/application_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/routing/students_routing_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/routing/students_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/routing/teachers_routing_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/routing/teachers_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/routing/teams_routing_spec.rb": [
+      "/Users/apprentice/client_project/IMLegend/spec/routing/teams_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/controllers/sessions_controller.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -1021,7 +1045,7 @@
         22,
         null,
         null,
-        null,
+        0,
         0,
         null,
         null,
@@ -1032,7 +1056,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/controllers/students_controller.rb": [
+      "/Users/apprentice/client_project/IMLegend/app/controllers/students_controller.rb": [
         1,
         1,
         1,
@@ -1108,6 +1132,9 @@
         null,
         0,
         0,
+        0,
+        0,
+        null,
         0,
         null,
         0,
@@ -1131,6 +1158,6 @@
         null
       ]
     },
-    "timestamp": 1475853179
+    "timestamp": 1475868519
   }
 }

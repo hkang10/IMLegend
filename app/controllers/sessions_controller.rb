@@ -6,8 +6,8 @@ class SessionsController < ApplicationController
 
  def create
   @teacher = Teacher.find_by(email: params[:email])
-  @team = @teacher.try(:team)
   if @teacher && @teacher.authenticate(params[:password])
+    @team = @teacher.team
     session[:teacher_id] = @teacher.id
     if @teacher.admin? == true
       redirect_to teacher_path(@teacher)
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       redirect_to team_path(@team)
     end
   else
-    # @errors = teacher.errors.full_messages
+    @errors = ['Email or password incorrect']
     render :new
   end
  end

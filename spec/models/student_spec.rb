@@ -39,7 +39,8 @@ describe Student do
 
   describe "associations" do
     it "has a team" do
-      new_team = Team.create!(team_name: 'Wolves', teacher_id: 1)
+      teacher = Teacher.create!(first_name: 'Travis', last_name: 'CI', email: 'tmoney@ymail.com', password: 'password', admin?: false)
+      new_team = Team.create!(team_name: 'Wolves', teacher_id: teacher.id)
       student.team_id = new_team.id
       expect(student.team).to eq new_team
     end
