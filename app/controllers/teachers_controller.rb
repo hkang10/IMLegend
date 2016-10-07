@@ -43,7 +43,7 @@ class TeachersController < ApplicationController
     end
   end
 
-  def edit
+  def update
     confirm_login{
       @teacher = Teacher.find(params[:id].to_i)
       if @teacher.admin? == true
@@ -51,8 +51,10 @@ class TeachersController < ApplicationController
       else
         @teacher.update_attributes(admin?: true)
       end
-
-      redirect_to teacher_path
+      respond_to do |format|
+        format.html { redirect_to teacher_path }
+        format.js {}
+      end
     }
   end
 

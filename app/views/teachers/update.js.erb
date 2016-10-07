@@ -1,0 +1,10 @@
+console.log("!!!");
+var $teacher = $(document).find('span#teacher-<%=@teacher.id%>')
+<% if @teacher.admin? %>
+  $teacher.siblings("a[href='/teachers/<%=@teacher.id%>']").text('Remove Admin');
+  $teacher.text('<%= @teacher.full_name %> (admin)')
+
+<% else %>
+  $teacher.siblings("a[href='/teachers/<%=@teacher.id%>']").text('Add Admin');
+  $teacher.text('<%= @teacher.full_name %>');
+<% end %>
