@@ -62,11 +62,15 @@ include AdminsHelper
           if @team.students.count < Team.max_students
             @student.update_attributes(team_id: team_id)
             @student.save
+            redirect_to team_path(@team)
           else
             @errors = ["You have the maximum number of students (#{Team.max_students})"]
+            respond_to do |format|
+              format.html { render :show}
+              format.js {}
+            end
           end
         end
-            redirect_to team_path(@team)
       when 'update_data'
         if params[:student][:sports_teams] != nil
           @student.add_sports(params[:student][:sports_teams][0])
@@ -75,8 +79,13 @@ include AdminsHelper
         if !@student.save
           @errors = @student.errors.full_messages
           @student = Student.find(@student.id)
+            respond_to do |format|
+              format.html { render :edit }
+              format.js {}
+            end
+        else
+          redirect_to student_path(@student)
         end
-        render :edit
       when 'remove_from_team'
         @student.team.update_attributes(captain_id: nil)
         @student.update_attributes(team_id: nil)

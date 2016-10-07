@@ -6,17 +6,18 @@
 
   <h4>Teachers:</h4>
   <% Teacher.all.each do |teacher| %>
-    <%= teacher.first_name %> <%= teacher.last_name %>
-      <% if teacher.admin? == true %>
-        (admin)
-        <%= link_to "Remove Admin", edit_teacher_path(teacher) %>
-      <% else %>
-        <%= link_to "Add Admin", edit_teacher_path(teacher) %>
-      <% end %>
+      <span id="teacher-<%=teacher.id%>"><%= teacher.first_name %> <%= teacher.last_name %> (admin)</span>
+    <% if teacher != current_teacher %>
+        <% if teacher.admin? == true %>
+          <%= link_to "Remove Admin", teacher_path(teacher), remote: true, method: 'patch' %>
+        <% else %>
+          <%= link_to "Add Admin", teacher_path(teacher), remote: true, method: 'patch' %>
+        <% end %>
+    <% end %>
       <br>
   <% end %>
   <h4 class="access-code">Change Access Code:</h4>
-  <%= form_for AccessCode.first do |f| %>
+  <%= form_for(AccessCode.first, remote: true) do |f| %>
     <%= f.text_field :code, value: '' %>
     <%= f.submit %>
   <% end %>

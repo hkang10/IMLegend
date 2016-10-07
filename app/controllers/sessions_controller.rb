@@ -16,7 +16,10 @@ class SessionsController < ApplicationController
     end
   else
     @errors = ['Email or password incorrect']
-    render :new
+    respond_to do |format|
+      format.html { render :new }
+      format.js {}
+    end
   end
  end
 
