@@ -1,22 +1,28 @@
 class TeamsController < ApplicationController
 
   def show
-    @team = Team.find_by(id: params[:id].to_i)
+    confirm_login{
+      @team = Team.find_by(id: params[:id].to_i)
+    }
   end
 
   def index
-    @teams = Team.all
+    confirm_login{
+      @teams = Team.all
+    }
   end
 
   def update
-    @team = Team.find_by(id: params[:id].to_i)
-    if current_teacher && current_teacher.id == @team.teacher_id
-      @team.update_attributes(team_params)
-      @errors = ['Something went wrong!'] if !@team.save
-    else
-      @errors = ['Something went wrong!']
-    end
-    render :show
+    confirm_login{
+      @team = Team.find_by(id: params[:id].to_i)
+      if current_teacher && current_teacher.id == @team.teacher_id
+        @team.update_attributes(team_params)
+        @errors = ['Something went wrong!'] if !@team.save
+      else
+        @errors = ['Something went wrong!']
+      end
+      render :show
+    }
   end
 
   private
