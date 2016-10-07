@@ -1,17 +1,17 @@
 <div class="admin-control">
   <h3>Admin Control</h3>
-  
+
   <h4>View Student Roster:</h4>
-  <%= link_to 'Students', teachers_path  %><br>
+  <%= link_to 'Students', admin_students_path  %><br>
 
   <h4>Teachers:</h4>
   <% Teacher.all.each do |teacher| %>
       <span id="teacher-<%=teacher.id%>"><%= teacher.first_name %> <%= teacher.last_name %> (admin)</span>
     <% if teacher != current_teacher %>
         <% if teacher.admin? == true %>
-          <%= link_to "Remove Admin", teacher_path(teacher), remote: true, method: 'patch' %>
+          <%= link_to "Remove Admin", teacher_path(teacher), method: :patch , remote: true%>
         <% else %>
-          <%= link_to "Add Admin", teacher_path(teacher), remote: true, method: 'patch' %>
+          <%= link_to "Add Admin", teacher_path(teacher), method: :patch, remote: true %>
         <% end %>
     <% end %>
       <br>
