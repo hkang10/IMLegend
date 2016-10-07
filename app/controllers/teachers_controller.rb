@@ -2,11 +2,19 @@ class TeachersController < ApplicationController
   protect_from_forgery with: :exception
 
   def index
-    @students = Student.all
+    confirm_login{
+      @students = Student.all
+    }
   end
 
   def new
    @teacher = Teacher.new
+  end
+
+  def show
+    confirm_login{
+      render :show
+    }
   end
 
   def create
@@ -36,21 +44,25 @@ class TeachersController < ApplicationController
   end
 
   def edit
-    @teacher = Teacher.find(params[:id].to_i)
-    if @teacher.admin? == true
-      @teacher.update_attributes(admin?: false)
-    else
-      @teacher.update_attributes(admin?: true)
-    end
+    confirm_login{
+      @teacher = Teacher.find(params[:id].to_i)
+      if @teacher.admin? == true
+        @teacher.update_attributes(admin?: false)
+      else
+        @teacher.update_attributes(admin?: true)
+      end
 
-    redirect_to teacher_path
+      redirect_to teacher_path
+    }
   end
 
   def destroy
-    @teacher = Teacher.find(params[:id].to_i)
-    @teacher.destroy
+    confirm_login{
+      @teacher = Teacher.find(params[:id].to_i)
+      @teacher.destroy
 
-    redirect_to teacher_path
+      redirect_to teacher_path
+    }
   end
 
   private
