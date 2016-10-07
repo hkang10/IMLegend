@@ -1,6 +1,46 @@
-<h1 class="title"><%= @student.full_name %></h1>
+<div class="cards">
+  <div class="card">
+    <div class="card-image">
+      <img src="https://unsplash.com/collections/158350/wolves?photo=dbRzRdHfXho" alt="">
+    </div>
+    <div class="card-header">
+      <h1 class="title"><%= @student.full_name %></h1>
+    </div>
+
+
+
 <% if @student.team_id !=nil %>
-  <h3>Team: <%= link_to @student.team.team_name, team_path(@student.team) %></h3>
+  <h3 id="team">Team <br> <%= link_to @student.team.team_name, team_path(@student.team) %></h3><hr>
+      <!-- Stats -->
+    <div class="card-copy">
+      <h2>Statistics</h2>
+        <div class="stats">
+          <ul>
+          <li class="stats"><%= @student.gpa %><span>GPA</span> </li>
+          <li class="stats"> <%= @student.gender %><span>Gender</span></li>
+          <li class="stats"> <%= @student.number_of_detentions %><span>Detentions</span></li>
+          <li class="stats"><%= @student.number_of_absences %><span>Absences</span></li>
+        </ul>
+      </div>
+    </div><!-- close stats -->
+    <br>
+    <hr>
+    <!-- Current sports teams -->
+    <h2 class="stats">Current teams</h3>
+    <% if !@student.sports_teams.empty? %>
+      <ul>
+        <% @student.sports_teams.each do |team| %>
+          <li><%= team %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p id="no-teams"><%= @student.first_name %> is not currently on  any sports teams.</p>
+    <% end %>
+  </div>
+</div><!-- Close card -->
+
+<!-- forms -->
+
   <% if @student.team == current_teacher.team && @student.team.captain != @student %>
     <%= form_for(@student.team) do |f| %>
       <%= f.hidden_field :captain_id, value: @student.id %>
@@ -15,31 +55,7 @@
   <% end %>
 <% end %>
 
-<!-- stats -->
-
-<h2>statistics</h2>
-  <div class="stats">
-    <ul>
-    <li class="stats"><%= @student.gpa %><span>GPA</span> </li>
-    <li class="stats"> <%= @student.gender %><span>Gender</span></li>
-    <li class="stats"> <%= @student.number_of_detentions %><span>Detentions</span></li>
-    <li class="stats"><%= @student.number_of_absences %><span>Absences</span></li>
-  </ul>
-</div>
-
 <br>
-
-<!-- Current sports teams -->
-<h3 class="stats">Current teams:</h3>
-<% if !@student.sports_teams.empty? %>
-  <ul>
-    <% @student.sports_teams.each do |team| %>
-      <li><%= team %></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p><%= @student.first_name %> is not currently on  any sports teams</p>
-<% end %>
 
 <!-- Admin Controls -->
 
