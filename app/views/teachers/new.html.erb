@@ -1,5 +1,6 @@
 <div class="teacher-form">
   <h3>Start your legend...........here</h3>
+  <%= render 'partials/errors', layout: false %>
   <%= form_for(@teacher) do |f| %>
   <p>
    <%= f.label :first_name %>
