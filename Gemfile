@@ -58,3 +58,4 @@ end
 
 gem 'puma'
 gem 'pry-rails'
+gem "refills", group: :development
