@@ -19,7 +19,12 @@
     <%= f.text_field :code, value: '' %>
     <%= f.submit %>
   <% end %>
-
+  <h4 class="csv-upload">
+    <%= form_tag({action: :upload, controller: 'students'}, multipart: true) do %>
+    <%= file_field_tag 'csv' %>
+    <%= submit_tag 'Upload' %>
+    <% end %>
+  </h4>
 
 </div>
 
