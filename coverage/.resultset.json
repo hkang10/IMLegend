@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/wow-me/IMLegend/config/environment.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/application.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/application.rb": [
         1,
         null,
         1,
@@ -36,12 +36,12 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/boot.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/environments/test.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/environments/test.rb": [
         1,
         null,
         null,
@@ -85,7 +85,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/assets.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -95,39 +95,12 @@
         null,
         null,
         null,
-        null,
-        null
-      ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/backtrace_silencers.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/cookies_serializer.rb": [
-        null,
-        null,
-        1
-      ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/inflections.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -136,18 +109,47 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/mime_types.rb": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/session_store.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/initializers/wrap_parameters.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -163,7 +165,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/config/routes.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/config/routes.rb": [
         1,
         null,
         null,
@@ -190,7 +192,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/helpers/admins_helper.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/helpers/admins_helper.rb": [
         1,
         1,
         null,
@@ -206,11 +208,11 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/helpers/application_helper.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/helpers/student_helper.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/helpers/student_helper.rb": [
         1,
         1,
         0,
@@ -221,7 +223,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/helpers/teacher_helper.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/helpers/teacher_helper.rb": [
         1,
         null,
         1,
@@ -236,7 +238,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/controllers/teams_controller.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/controllers/teams_controller.rb": [
         1,
         null,
         1,
@@ -272,7 +274,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/controllers/application_controller.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -290,7 +292,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/soon_to_be_legends_page_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/features/soon_to_be_legends_page_spec.rb": [
         1,
         null,
         1,
@@ -359,7 +361,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/student_name_clickable_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/features/student_name_clickable_spec.rb": [
         1,
         null,
         1,
@@ -425,29 +427,11 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/student_show_page_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/features/student_show_page_spec.rb": [
         1,
         null,
         1,
         1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
         1,
         1,
         1,
@@ -459,10 +443,29 @@
         1,
         1,
         null,
+        1,
+        null,
+        1,
+        1,
+        null,
         null,
         1,
         1,
         1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null,
         1,
@@ -598,7 +601,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/teacher_home_page_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/features/teacher_home_page_spec.rb": [
         1,
         null,
         1,
@@ -765,7 +768,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/team_name_clickable_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/features/team_name_clickable_spec.rb": [
         1,
         null,
         1,
@@ -835,10 +838,10 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/features/teams_index_page_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/features/teams_index_page_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/models/student_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/models/student_spec.rb": [
         1,
         null,
         1,
@@ -887,7 +890,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/models/student.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/models/student.rb": [
         1,
         1,
         1,
@@ -907,7 +910,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/models/teacher_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/models/teacher_spec.rb": [
         1,
         null,
         1,
@@ -942,7 +945,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/models/teacher.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/models/teacher.rb": [
         1,
         1,
         null,
@@ -953,7 +956,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/models/team_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/models/team_spec.rb": [
         1,
         null,
         1,
@@ -979,7 +982,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/models/team.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/models/team.rb": [
         1,
         1,
         1,
@@ -991,19 +994,19 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/routing/application_routing_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/routing/application_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/routing/students_routing_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/routing/students_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/routing/teachers_routing_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/routing/teachers_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/spec/routing/teams_routing_spec.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/spec/routing/teams_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/controllers/sessions_controller.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -1032,7 +1035,7 @@
         null,
         null
       ],
-      "/Users/apprentice/wow-me/IMLegend/app/controllers/students_controller.rb": [
+      "/Users/Shenanigans/Documents/devbootcamp/phase-3-tracks/IMLegend/app/controllers/students_controller.rb": [
         1,
         1,
         1,
@@ -1131,6 +1134,6 @@
         null
       ]
     },
-    "timestamp": 1475853179
+    "timestamp": 1475860291
   }
 }

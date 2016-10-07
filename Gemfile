@@ -59,3 +59,4 @@ end
 gem 'puma'
 gem 'pry-rails'
 gem "refills", group: :development
+gem 'capybara_turbolinks', '~> 0.1.4'
