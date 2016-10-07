@@ -1,34 +1,49 @@
-<div class="admin-control">
+<div id="admin-control">
   <h3>Admin Control</h3>
-  
-  <h4>View Student Roster:</h4>
-  <%= link_to 'Students', teachers_path  %><br>
-
-  <h4>Teachers:</h4>
-  <% Teacher.all.each do |teacher| %>
+</div>
+<div class="flex-boxes">
+  <div class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <h1 class="flex-title">View Student Roster:
+    </h1>
+    <div class="clear-flex-box"><%= link_to 'Students', teachers_path  %></div>
+  </div>
+  <div class="flex-box flex-box-big">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <h1 class="flex-title">Teachers:</h1>
+    <div>  <% Teacher.all.each do |teacher| %>
       <span id="teacher-<%=teacher.id%>"><%= teacher.first_name %> <%= teacher.last_name %> (admin)</span>
-    <% if teacher != current_teacher %>
         <% if teacher.admin? == true %>
           <%= link_to "Remove Admin", teacher_path(teacher), remote: true, method: 'patch' %>
         <% else %>
           <%= link_to "Add Admin", teacher_path(teacher), remote: true, method: 'patch' %>
         <% end %>
-    <% end %>
-      <br>
-  <% end %>
-  <h4 class="access-code">Change Access Code:</h4>
-  <%= form_for(AccessCode.first, remote: true) do |f| %>
+        <br>
+      <% end %>
+    </div>
+  </div>
+  <a href="javascript:void(0)" class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <h1 class="flex-title">Change Access Code:</h1>
+    <div>
+      <%= form_for(AccessCode.first, remote: true) do |f| %>
     <%= f.text_field :code, value: '' %>
     <%= f.submit %>
-  <% end %>
-  <h4 class="csv-upload">
-    <%= form_tag({action: :upload, controller: 'students'}, multipart: true) do %>
-    <%= file_field_tag 'csv' %>
-    <%= submit_tag 'Upload' %>
-    <% end %>
-  </h4>
-
+      <% end %>
+    </div>
+  </a>
+  <div class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <h1 class="flex-title">Upload students database:</h1>
+      <div class="csv-upload">
+        <%= form_tag({action: :upload, controller: 'students'}, multipart: true) do %>
+        <%= file_field_tag 'csv' %>
+      </div>
+        <%= submit_tag 'Upload' %>
+        <% end %>
+  </div>
 </div>
+
 
 
 
