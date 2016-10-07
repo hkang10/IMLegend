@@ -1,5 +1,6 @@
 .flex-boxes {
   @include span-columns(9);
+  @include shift(1.5);
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
   $dark-gray: #333 !default;
@@ -75,4 +76,13 @@
   .flex-box-big {
     flex: 1 1 40em;
   }
+}
+
+.csv-upload {
+  @include shift(5);
+}
+
+#admin-control {
+  text-align: center;
+  font-size: 24px;
 }

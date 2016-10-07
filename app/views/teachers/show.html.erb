@@ -1,55 +1,49 @@
-<div class="admin-control">
+<div id="admin-control">
   <h3>Admin Control</h3>
-
-  <h4>View Student Roster:</h4>
-  <%= link_to 'Students', teachers_path  %><br>
-
-  <h4>Teachers:</h4>
-  <% Teacher.all.each do |teacher| %>
-    <%= teacher.first_name %> <%= teacher.last_name %>
-      <% if teacher.admin? == true %>
-        (admin)
-        <%= link_to "Remove Admin", edit_teacher_path(teacher) %>
-      <% else %>
-        <%= link_to "Add Admin", edit_teacher_path(teacher) %>
-      <% end %>
-      <br>
-  <% end %>
-  <h4 class="access-code">Change Access Code:</h4>
-  <%= form_for AccessCode.first do |f| %>
-    <%= f.text_field :code, value: '' %>
-    <%= f.submit %>
-  <% end %>
-  <h4 class="csv-upload">
-    <%= form_tag({action: :upload, controller: 'students'}, multipart: true) do %>
-    <%= file_field_tag 'csv' %>
-    <%= submit_tag 'Upload' %>
-    <% end %>
-  </h4>
-
 </div>
 
 <div class="flex-boxes">
+  <div class="flex-box">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <h1 class="flex-title">View Student Roster:
+    </h1>
+    <div class="clear-flex-box"><%= link_to 'Students', teachers_path  %></div>
+  </div>
+  <div class="flex-box flex-box-big">
+    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
+    <h1 class="flex-title">Teachers:</h1>
+    <div>  <% Teacher.all.each do |teacher| %>
+      <%= teacher.first_name %> <%= teacher.last_name %>
+        <% if teacher.admin? == true %>
+          (admin)
+          <%= link_to "Remove Admin", edit_teacher_path(teacher) %>
+        <% else %>
+          <%= link_to "Add Admin", edit_teacher_path(teacher) %>
+        <% end %>
+        <br>
+      <% end %>
+    </div>
+  </div>
   <a href="javascript:void(0)" class="flex-box">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
-    <h1 class="flex-title">A Flex Box Item</h1>
-    <p>Lorem adipisicing elit. Voluptas consectetur tempora quis nam, officia tenetur blanditiis in illo dolor?</p>
+    <h1 class="flex-title">Change Access Code:</h1>
+    <div>
+      <%= form_for AccessCode.first do |f| %>
+        <%= f.text_field :code, value: '' %>
+        <%= f.submit %>
+      <% end %>
+    </div>
   </a>
-  <a href="javascript:void(0)" class="flex-box flex-box-big">
+  <div class="flex-box">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
-    <h1 class="flex-title">Another Wide Item</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quis ipsum, officia, aperiam tenetur dolor molestiae voluptate perferendis dolorem vel ex, unde fugit blanditiis sapiente.</p>
-  </a>
-  <a href="javascript:void(0)" class="flex-box">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
-    <h1 class="flex-title">Flex Box Item</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo obcaecati in provident illo.</p>
-  </a>
-  <a href="javascript:void(0)" class="flex-box">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="">
-    <h1 class="flex-title">Last Flex Box Item</h1>
-    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-  </a>
+    <h1 class="flex-title">Upload students database:</h1>
+      <div class="csv-upload">
+        <%= form_tag({action: :upload, controller: 'students'}, multipart: true) do %>
+        <%= file_field_tag 'csv' %>
+      </div>
+        <%= submit_tag 'Upload' %>
+        <% end %>
+  </div>
 </div>
 
 

@@ -429,6 +429,7 @@ hr {
   display: block;
   margin-right: 2.35765%;
   width: 74.41059%;
+  margin-left: 12.79471%;
   align-items: stretch;
   clear: both;
   display: flex;
@@ -491,6 +492,13 @@ hr {
       margin: auto; }
   .flex-boxes .flex-box-big {
     flex: 1 1 40em; }
+
+.csv-upload {
+  margin-left: 42.64902%; }
+
+#admin-control {
+  text-align: center;
+  font-size: 24px; }
 
 body {
   -webkit-font-smoothing: antialiased; }
