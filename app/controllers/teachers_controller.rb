@@ -1,11 +1,11 @@
 class TeachersController < ApplicationController
   protect_from_forgery with: :exception
 
-  def index
-    confirm_login{
-      @students = Student.all
-    }
-  end
+  # def index
+  #   confirm_login{
+  #     @students = Student.all
+  #   }
+  # end
 
   def new
    @teacher = Teacher.new
@@ -13,7 +13,16 @@ class TeachersController < ApplicationController
 
   def show
     confirm_login{
-      render :show
+      @teacher = Teacher.find(params[:id].to_i)
+      if @teacher.admin? == true
+        @teacher.update_attributes(admin?: false)
+      else
+        @teacher.update_attributes(admin?: true)
+      end
+      respond_to do |format|
+        format.html { redirect_to admin_path }
+        format.js {}
+      end
     }
   end
 
@@ -28,9 +37,9 @@ class TeachersController < ApplicationController
        session[:teacher_id] = @teacher.id
        if @teacher.admin? == true
           @teachers = Teacher.all
-          redirect_to teacher_path
+          redirect_to admin_path
         else
-          binding.pry
+          # binding.pry
           redirect_to team_path(@team)
         end
       else
@@ -58,7 +67,7 @@ class TeachersController < ApplicationController
         @teacher.update_attributes(admin?: true)
       end
       respond_to do |format|
-        format.html { redirect_to teacher_path }
+        format.html { redirect_to admin_path }
         format.js {}
       end
     }
@@ -66,10 +75,11 @@ class TeachersController < ApplicationController
 
   def destroy
     confirm_login{
-      @teacher = Teacher.find(params[:id].to_i)
-      @teacher.destroy
-
-      redirect_to teacher_path
+      if current_teacher.admin?
+        @teacher = Teacher.find(params[:id].to_i)
+        @teacher.destroy
+        redirect_to admin_path
+      end
     }
   end
 
