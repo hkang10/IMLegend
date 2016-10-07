@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/client_project/IMLegend/config/environment.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/apprentice/client_project/IMLegend/config/application.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/application.rb": [
         1,
         null,
         1,
@@ -36,12 +36,12 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/config/boot.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/apprentice/client_project/IMLegend/config/environments/test.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/environments/test.rb": [
         1,
         null,
         null,
@@ -85,7 +85,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/config/initializers/assets.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -98,7 +98,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/config/initializers/backtrace_silencers.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -107,18 +107,18 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/config/initializers/cookies_serializer.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/apprentice/client_project/IMLegend/config/initializers/filter_parameter_logging.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/apprentice/client_project/IMLegend/config/initializers/inflections.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -136,18 +136,18 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/config/initializers/mime_types.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/config/initializers/session_store.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/apprentice/client_project/IMLegend/config/initializers/wrap_parameters.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -163,7 +163,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/config/routes.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/config/routes.rb": [
         1,
         null,
         null,
@@ -177,13 +177,14 @@
         1,
         1,
         null,
+        1,
         1,
         1,
         null,
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/app/helpers/admins_helper.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/helpers/admins_helper.rb": [
         1,
         1,
         null,
@@ -197,143 +198,106 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/app/helpers/application_helper.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/app/helpers/teacher_helper.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/helpers/student_helper.rb": [
         1,
-        null,
-        1,
-        299,
-        null,
-        null,
-        1,
-        79,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/apprentice/client_project/IMLegend/app/controllers/teams_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        33,
-        null,
-        null,
         1,
         0,
-        null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        null,
-        0,
-        null,
-        2,
-        null,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null,
-        null
-      ],
-      "/Users/apprentice/client_project/IMLegend/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        null,
-        1,
         0,
         0,
         null,
         0,
         null,
-        null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/features/soon_to_be_legends_page_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/helpers/teacher_helper.rb": [
         1,
         null,
         1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        389,
         null,
         null,
         1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        136,
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/features/student_name_clickable_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/features/soon_to_be_legends_page_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/features/student_name_clickable_spec.rb": [
         1,
         null,
         1,
@@ -399,7 +363,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/features/student_show_page_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/features/student_show_page_spec.rb": [
         1,
         null,
         1,
@@ -572,7 +536,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/features/teacher_home_page_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/features/teacher_home_page_spec.rb": [
         1,
         null,
         1,
@@ -739,7 +703,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/features/team_name_clickable_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/features/team_name_clickable_spec.rb": [
         1,
         null,
         1,
@@ -809,10 +773,10 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/features/teams_index_page_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/features/teams_index_page_spec.rb": [
 
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/models/student_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/models/student_spec.rb": [
         1,
         null,
         1,
@@ -861,7 +825,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/app/models/student.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/models/student.rb": [
         1,
         1,
         1,
@@ -869,9 +833,18 @@
         1,
         104,
         null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/models/teacher_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/models/teacher_spec.rb": [
         1,
         null,
         1,
@@ -906,7 +879,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/app/models/teacher.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/models/teacher.rb": [
         1,
         1,
         null,
@@ -917,7 +890,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/models/team_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/models/team_spec.rb": [
         1,
         null,
         1,
@@ -943,7 +916,7 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/app/models/team.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/models/team.rb": [
         1,
         1,
         1,
@@ -955,19 +928,19 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/routing/application_routing_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/routing/application_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/routing/students_routing_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/routing/students_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/routing/teachers_routing_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/routing/teachers_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/client_project/IMLegend/spec/routing/teams_routing_spec.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/spec/routing/teams_routing_spec.rb": [
 
       ],
-      "/Users/apprentice/client_project/IMLegend/app/controllers/sessions_controller.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -996,34 +969,78 @@
         null,
         null
       ],
-      "/Users/apprentice/client_project/IMLegend/app/controllers/students_controller.rb": [
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        57,
+        57,
+        null,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/controllers/teams_controller.rb": [
+        1,
+        null,
+        1,
+        31,
+        31,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        0,
+        null,
+        2,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/dcdobrick/Documents/DBC/Phase-3/wk1/IMLegend/app/controllers/students_controller.rb": [
         1,
         1,
         5,
+        5,
+        null,
         null,
         null,
         1,
         19,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        0,
-        0,
-        null,
-        0,
+        19,
         null,
         null,
         null,
         1,
         0,
-        null,
         0,
+        null,
         null,
         null,
         1,
@@ -1032,8 +1049,11 @@
         0,
         null,
         0,
+        0,
         null,
         0,
+        null,
+        null,
         null,
         null,
         1,
@@ -1041,6 +1061,26 @@
         0,
         0,
         null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
         0,
         null,
         0,
@@ -1051,14 +1091,20 @@
         0,
         null,
         null,
-        null,
+        0,
         null,
         0,
         0,
         null,
-        null,
+        0,
+        0,
+        0,
         null,
         0,
+        0,
+        0,
+        null,
+        null,
         null,
         null,
         1,
@@ -1070,6 +1116,6 @@
         null
       ]
     },
-    "timestamp": 1475790685
+    "timestamp": 1475802353
   }
 }
