@@ -14,11 +14,22 @@
     <%= f.submit "Add to Team" %>
   <% end %>
 <% end %>
-<hr>
+
+<!-- stats -->
+
 <h2>statistics</h2>
-<h3 class="stats">GPA: <%= @student.gpa %></h3>
-<h3 class="stats">Gender: <%= @student.gender %></h3>
-<h3 class="stats">Detentions: <%= @student.number_of_detentions %></h3>
+  <div class="stats">
+    <ul>
+    <li class="stats"><%= @student.gpa %><span>GPA</span> </li>
+    <li class="stats"> <%= @student.gender %><span>Gender</span></li>
+    <li class="stats"> <%= @student.number_of_detentions %><span>Detentions</span></li>
+    <li class="stats"><%= @student.number_of_absences %><span>Absences</span></li>
+  </ul>
+</div>
+
+<br>
+
+<!-- Current sports teams -->
 <h3 class="stats">Current teams:</h3>
 <% if !@student.sports_teams.empty? %>
   <ul>
@@ -30,7 +41,7 @@
   <p><%= @student.first_name %> is not currently on  any sports teams</p>
 <% end %>
 
-<h3 class="stats">Absences: <%= @student.number_of_absences %></h3>
+<!-- Admin Controls -->
 
 <% if current_teacher.admin? == true %>
   <%= link_to "Edit", edit_student_path(@student) %>

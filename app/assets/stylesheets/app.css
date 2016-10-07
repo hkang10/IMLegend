@@ -188,6 +188,28 @@ hr {
   border-top: 0;
   margin: 1.5em 0; }
 
+.stats {
+  padding: 0.75em; }
+  .stats ul {
+    padding: 0; }
+  .stats li {
+    border-right: 1px solid rgba(51, 51, 51, 0.2);
+    color: #217ee7;
+    display: inline;
+    float: left;
+    font-size: 1.2em;
+    line-height: 1.1em;
+    padding: 0 0.7em; }
+    .stats li:first-child {
+      padding-left: 0; }
+    .stats li:last-child {
+      border-right: 0; }
+  .stats span {
+    color: #333;
+    display: block;
+    font-size: 0.7em;
+    font-weight: normal; }
+
 p {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
