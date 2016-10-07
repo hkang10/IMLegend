@@ -277,11 +277,16 @@ hr {
       background-color: #f7f7f7; }
 
 #no-teams {
-  padding-left: 15px; }
+  padding-left: 15px;
+  height: 18px; }
 
 #team {
   margin-top: 15px;
   padding-left: 12px; }
+
+#student-name {
+  font-size: 20px;
+  font-weight: normal; }
 
 .grid-items-lines {
   position: relative; }
