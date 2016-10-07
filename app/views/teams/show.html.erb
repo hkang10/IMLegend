@@ -1,13 +1,29 @@
-<h2> <%= @team.team_name %></h2>
 <%= render 'partials/errors', layout: false %>
-<% if @team.captain %>
-  <h3>Captain: <%= link_to @team.captain.full_name, student_path(@team.captain) %> </h3>
-<% end %>
-<h3>Teacher: <%= @team.teacher.full_name %></h3>
-<% @team.students.each do |student| %>
-<p><h3><%= link_to(student.full_name, student) %></h3></p>
-<% end %>
-<% if (@team.students.count < Team.max_students) && (current_teacher.team == @team) %>
-  <br><%= link_to '+ student', students_path %>
-<% end %>
 
+<div id="teams-table">
+  <table class="tables" id="team-list">
+    <thead>
+      <tr>
+        <th>
+          <h1><%= @team.team_name %></h1>
+          <p id="teacher">Teacher: <%= @team.teacher.full_name %></p><hr>
+          <% if @team.captain %>
+            <p>Captain: <%= link_to @team.captain.full_name, student_path(@team.captain) %></p>
+          <% end %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <% @team.students.each do |student| %>
+        <tr>
+          <td><%= link_to(student.full_name, student) %></td>
+        </tr>
+        <% end %>
+        <% if (@team.students.count < Team.max_students) && (current_teacher.team == @team) %>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+  <br><%= link_to '+ student', students_path %>
+</div>
